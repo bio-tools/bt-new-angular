@@ -1,0 +1,36 @@
+@charset "UTF-8";
+@import "../../sass/base/mixins";
+
+section.bio-top-section {
+    background: url("../../assets/images/topbanner-bg.jpg") no-repeat top center;
+	@include bgcover;
+	padding-bottom: 55px;
+	font-family: 'kontrapunkt', Arial, sans-serif;
+}
+
+section.bio-top-section {
+	@include device(phone){
+		padding-bottom: 115px;
+    }
+    // The h1 tag describing bio.tools
+	.top-text-front {
+		padding-top: 40px;
+		// padding-top: 115px;
+		max-width: 700px;
+		margin: 0 auto;
+		font-weight: 700;
+		text-align: center;
+		padding-bottom: 40px;
+		// padding-bottom: 115px;
+		@include device(phone){
+			font-size: 24px;
+			padding-left: 70px;
+			padding-right: 70px;
+			padding-bottom: 50px;
+		}
+		@media screen and (max-width: 420px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+}

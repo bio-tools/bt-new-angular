@@ -1,0 +1,19 @@
+<p>new-domain works!</p>
+
+<button (click)="onSave()">Save</button>
+<p style="color: red;" *ngIf="error">
+    {{ error | json }}    
+</p>
+
+<h3>Edit JSON</h3>
+<bt-json-editor [data]="domain|json" (dataChange)="updateToolObject($event)"></bt-json-editor>
+
+<h3>View JSON</h3>
+<pre class="scroll-box">{{domain | json}}</pre>
+
+<button (click)="putRandomTitle()">Generate Random Title</button>
+<hr>
+<button (click)="onSave()">Save</button>
+<p style="color: red;" *ngIf="error">
+    {{ error | json }}    
+</p>

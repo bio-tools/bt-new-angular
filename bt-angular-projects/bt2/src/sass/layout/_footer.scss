@@ -1,0 +1,149 @@
+footer#footer {
+	border-top: 1px solid #d3d8da;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	> .inner {
+		@include main-width;
+		.site-logo-container {
+			.site-logo {
+				display: block;
+				width: 234px;
+				height: 50px;
+				background: url("assets/images/site-logo.svg") no-repeat;
+				@include all-easing;
+				&:hover {
+					//@include scale(1.03);
+					transform: scale(1.03);
+					opacity: 0.8;
+				}
+				@include device(phone){
+					@include bgcontain;
+					width: 205px;
+					height: 44px;
+				}
+			}
+		}
+		nav {
+			display: block;
+			overflow: hidden;
+			ul {
+				list-style: none;
+				li {
+					float: left;
+					@include device(phone){
+						float: none;
+					}
+					&:first-child {
+						a {
+							padding-left: 0px;
+						}
+					}
+					a {
+						padding: 0px 20px;
+						@include device(phone){
+							padding: 10px 0px;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		nav.primary-nav {
+			padding-top: 85px;
+			@include device(phone){
+				padding-top: 40px;
+			}
+			ul {
+				li {
+					a {
+						font-size: 32px;
+						font-weight: 700;
+					}
+				}
+			}
+		}
+		nav.secondary-nav {
+			padding-top: 30px;
+			@include device(phone){
+				padding-top: 50px;
+			}
+			ul {
+				li {
+					a {
+						font-size: 22px;
+						@include device(phone){
+							padding: 4px 0px;
+						}
+					}
+				}
+			}
+		}
+		div.media-links {
+			position: absolute;
+			right: 30px;
+			bottom: 10px;
+			width: 305px;
+			@include device(phone){
+				width: 100%;
+				position: static;
+				overflow: hidden;
+				padding-top: 60px;
+			}
+			.social {
+				float: left;
+				padding-top: 12px;
+				@media screen and (max-width: 360px) {
+					float: none;
+					overflow: hidden;
+					padding-bottom: 30px;
+				}
+				> a {
+					display: block;
+					float: left;
+					width: 50px;
+					height: 50px;
+					border: 1px solid #d9dbde;
+					// @include border-radius(100px);
+					border-radius: 100px;
+					@include all-easing;
+					margin-right: 10px;
+					&:hover {
+						&.twitter {
+							background: #54c8e3 url("assets/images/twitter-hover.svg") no-repeat center center;
+							border: 1px solid #54c8e3;
+						}
+						&.linkedin {
+							background: #54c8e3 url("assets/images/linkedin-hover.svg") no-repeat center center;
+							border: 1px solid #54c8e3;
+						}
+						&.github {
+							background: #54c8e3 url("assets/images/github-hover.svg") no-repeat center center;
+							border: 1px solid #54c8e3;
+						}
+					}
+					&.twitter {
+						background: url("assets/images/twitter.svg") no-repeat center center;
+					}
+					&.linkedin {
+						background: url("assets/images/linkedin.svg") no-repeat center center;
+					}
+					&.github {
+						background: url("assets/images/github.svg") no-repeat center center;
+					}
+				}
+			}
+			.other {
+				float: right;
+				@media screen and (max-width: 360px) {
+					float: none;
+				}
+				a.elixir {
+					display: block;
+					width: 98px;
+					height: 72px;
+					background: url("assets/images/elixir.png") no-repeat center center;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,478 @@
+@import 'compass';
+@charset "UTF-8";
+
+@import "base/mixins";
+
+//Styling specific to tool page
+section.bio-top-section {
+	> .bio-search-browse {
+		position: absolute;
+		top: 40px;
+		left: 50%;
+		margin-left: -170px;
+		width: 100%;
+		@include device(tablet){
+			position: static;
+			margin-left: auto;
+			width: auto;
+			margin: 0 auto;
+			padding-top: 40px;
+		}
+		@media screen and (max-width: 415px) {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+	}
+	.bio-search-container {
+		margin: 0 auto;
+		@media screen and (max-width: 930px) {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		> form {
+			margin-top: 35px;
+		}
+	}
+}
+
+//Tags larger on tool page than on search page
+.bio-tag-row {
+	a.tag {
+		font-size: 16px;
+		padding: 10px 21px;
+		&.linux-os, &.windows-os, &.mac-os {
+			width: 40px;
+			-moz-box-shadow: inset 0px 0px 0px 1px #e2e2e2;
+		  -webkit-box-shadow: inset 0px 0px 0px 1px #e2e2e2;
+		  box-shadow: inset 0px 0px 0px 1px #e2e2e2;
+		  background: transparent;
+		  height: 40px;
+		}
+		&.linux-os {
+			background: url("../../images/linux-os.svg") no-repeat center center;
+		}
+		&.mac-os {
+			background: url("../../images/mac-os.svg") no-repeat center center;
+		}
+		&.windows-os {
+			background: url("../../images/windows-os.svg") no-repeat center center;
+		}
+	}
+}
+
+section.two-col-grid {
+	> .inner {
+		padding-top: 55px;
+		.bio-tag-row {
+			clear: both;
+			width: 100%;
+			padding-top: 30px;
+		}
+		> .left-col {
+			h1 {
+				padding-left: 60px;
+				background: url('../../images/circle_lightblue.svg') no-repeat left center;
+				padding-top: 15px;
+				span {
+					font-size: 18px;
+					font-weight: 400;
+					color: #66757e;
+					@include device(phone){
+						font-size: 14px;
+					}
+				}
+				@include device(phone){
+					font-size: 26px;
+					padding-left: 40px;
+				}
+			}
+			&.expand {
+				.tool-description {
+					display: block;
+				}
+			}
+			.tool-description {
+				display: none;
+			}
+		}
+		> .right-col {
+			padding-top: 75px;
+			@include device(phone){
+				padding-top: 40px;
+			}
+			.tool-left {
+				float: left;
+				width: 65%;
+				padding-right: 20px;
+				> div {
+					padding-bottom: 20px;
+					&:last-child {
+						padding-bottom: 0px;
+					}
+				}
+				@include device(phone){
+					float: none;
+					width: 100%;
+					padding-right: 0px;
+				}
+				a {
+					word-break: break-word;
+				}
+			}
+			.tool-right {
+				float: right;
+				width: 35%;
+				padding-left: 20px;
+				text-align: center;
+				@include device(phone){
+					float: none;
+					width: 100%;
+					padding-left: 0px;
+					padding-top: 40px;
+					.badge {
+						display: inline-block;
+						padding-right: 20px;
+						&:last-child {
+							padding-right: 0px;
+						}
+					}
+				}
+				img {
+					width: 100%;
+					height: auto;
+					max-width: 110px;
+					padding-bottom: 15px;
+				}
+			}
+		}
+	}
+}
+
+section.bio-topics {
+	padding: 60px 0px;
+	border-top: 1px solid #d3d8da;
+	> .inner {
+		@include main-width;
+		h2 {
+			padding-bottom: 20px;
+		}
+	}
+}
+
+section.functions {
+	background: $darkblue;
+	.function-container {
+		color: $lightblue;
+		padding: 90px 0px;
+		border-bottom: 1px solid #141e23;
+		@include device(phone){
+			padding: 50px 0px;
+		}
+		h3 {
+			color: #fff;
+			padding-bottom: 80px;
+			@include device(tablet){
+				padding-bottom: 75px;
+			}
+		}
+		> .inner {
+			@include main-width;
+		}
+		&:last-child {
+			border-bottom: 0px;
+		}
+		.function-heading {
+			position: absolute;
+			left: 0px;
+			right: 0px;
+			top: 0px;
+			.f-heading {
+				font-size: 32px;
+				text-align: center;
+				padding: 0px 40px;
+				min-height: 1px;
+				@include device(phone){
+					float: none;
+					width: 100%;
+				}
+				&:first-child {
+					padding-left: 0px;
+				}
+				&:last-child {
+					padding-right: 0px;
+				}
+				span {
+					display: inline-block;
+					padding-left: 70px;
+				}
+				&.input {
+					span {
+						background: url("../../images/input-icon.svg") no-repeat left center;
+					}
+				}
+				&.operation {
+					span {
+						background: url("../../images/operation-icon.svg") no-repeat left center;
+					}
+				}
+				&.output {
+					span {
+						padding-left: 0px;
+						padding-right: 70px;
+						background: url("../../images/output-icon.svg") no-repeat right center;
+					}
+				}
+			}
+		}
+		.function-columns {
+			overflow: hidden;
+			display: flex;
+			//Only display first col
+			&.col0-content.col1-no-content.col2-no-content {
+				.function-col:first-child .function-item:after {
+					display: none;
+				}
+			}
+			//Only display last col
+			&.col0-no-content.col1-no-content.col2-content {
+				.function-col:last-child .function-item:after {
+					display: none;
+				}
+			}
+			@include device(tablet){
+				display: block;
+				//First col is last (or only) col to be displayed
+				&.col0-content.col1-no-content.col2-no-content {
+					.function-col.first {
+						.function-content {
+							padding-bottom: 0px;
+							.function-item {
+								&:after {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+				//Middle col is last (or only) col to be displayed
+				&.col0-no-content.col1-content.col2-no-content, &.col0-content.col1-content.col2-no-content {
+					.function-col.second {
+						.function-content {
+							padding-bottom: 0px;
+							.function-item {
+								&:after {
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+			.function-col {
+				width: 33.333%;
+				font-size: 20px;
+				text-align: center;
+				padding: 0px 40px;
+				min-height: 1px;
+				display: flex;
+		    align-items: center;
+		    justify-content: center;
+		    flex-wrap: wrap;
+		    position: relative;
+		    //Add padding if heading is present
+		    .function-heading + .function-content {
+		    	padding-top: 100px;
+		    	@include device(tablet){
+		    		padding-top: 70px;
+		    	}
+		    }
+		    .function-content {
+		    	width: 100%;
+		    	@include device(tablet){
+		    		padding-bottom: 110px;
+		    	}
+		    }
+		    @include device(tablet){
+		    	width: 100%;
+		    	padding: 0px;
+		    	position: relative;
+		    	&:last-child {
+		    		&:after {
+		    			display: none;
+		    		}
+		    	}
+		    }
+				&:first-child {
+					padding-left: 0px;
+					.function-item {
+						&:after {
+							background: url("../../images/function-arrow.svg") no-repeat center center;
+							position: absolute;
+							width: 16px;
+							height: 27px;
+							right: -50px;
+							top: 50%;
+							-webkit-transform: translateY(-50%);
+					    -moz-transform: translateY(-50%);
+					    -ms-transform: translateY(-50%);
+					    transform: translateY(-50%);
+							content: "";
+							display: block;
+							@include device(tablet){
+								display: none;
+							}
+						}
+					}
+				}
+				&.second {
+					.function-content {
+						height: 100%;
+						.function-item {
+							height: 100%;
+						}
+					}
+				}
+				&:last-child {
+					padding-right: 0px;
+					@include device(tablet){
+						.function-content {
+							padding-bottom: 30px;
+						}
+					}
+					.function-item {
+						&:after {
+							background: url("../../images/function-arrow.svg") no-repeat center center;
+							position: absolute;
+							width: 16px;
+							height: 27px;
+							left: -50px;
+							top: 50%;
+							-webkit-transform: translateY(-50%);
+					    -moz-transform: translateY(-50%);
+					    -ms-transform: translateY(-50%);
+					    transform: translateY(-50%);
+							content: "";
+							display: block;
+						}
+					}
+				}
+				.function-item {
+					border: 2px solid $lightblue;
+					@include border-radius(12px);
+					position: relative;
+					padding: 5px 20px;
+					margin-bottom: 20px;
+					width: 100%;
+					display: flex;
+				  align-items: center;
+				  min-height: 66px;
+				  justify-content: center;
+					&:last-child {
+						margin-bottom: 0px;
+						@include device(tablet){
+							&:after {
+								background: url("../../images/function-arrow.svg") no-repeat center center;
+								position: absolute;
+								width: 16px;
+								height: 27px;
+								bottom: -65px;
+								left: 50%;
+								margin-left: -8px;
+								content: "";
+								display: block;
+								-webkit-transform: rotate(90deg);
+						    -moz-transform: rotate(90deg);
+						    transform: rotate(90deg);
+						    top: auto;
+						    right: auto;
+							}
+						}
+					}
+					span {
+						position: relative;
+						z-index: 5;
+					}
+					&:before {
+						background: $darkblue;
+						position: absolute;
+						left: 13px;
+						right: 13px;
+						top: -2px;
+						bottom: -2px;
+						content: "";
+						display: block;
+					}
+				}
+			}
+		}
+		.note-container {
+			padding-top: 80px;
+			&.expand {
+				.note-toggle {
+					color: #929ca3;
+				}
+				.note-content {
+					display: block;
+				}
+			}
+			.note-toggle {
+				background: url("../../images/note-icon.svg") no-repeat left center;
+				padding-left: 50px;
+				padding-bottom: 5px;
+				display: block;
+				cursor: pointer;
+				max-width: 885px;
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+			.note-content {
+				padding-left: 50px;
+				color: #929ca3;
+				max-width: 885px;
+				display: none;
+			}
+		}
+	}
+}
+
+//Tool details section
+section.bio-tool-details {
+	padding-top: 100px;
+	padding-bottom: 25px;
+	@include device(phone){
+		padding-top: 75px;
+	}
+ > .inner {
+ 	@include main-width;
+ 	.three-col-grid p {
+ 		color: #333333;
+ 	}
+ }
+}
+
+section.bio-tool-actions {
+	padding: 60px 0px;
+	border-top: 1px solid #d3d8da;
+	@include device(phone){
+		padding: 50px 0px;
+	}
+	> .inner {
+		@include main-width;
+		text-align: center;
+		> div {
+			display: inline-block;
+			padding-right: 20px;
+			@include device(phone){
+				display: block;
+				padding-right: 0px;
+			}
+			&:last-child {
+				padding-right: 0px;
+				@include device(phone){
+					margin-top: 20px;
+				}
+			}
+		}
+	}
+}

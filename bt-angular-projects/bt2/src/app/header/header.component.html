@@ -1,0 +1,120 @@
+<header id="header">
+    <a [routerLink]="['/']" class="site-logo"></a>
+    <span class="register-toggle" (click)="registerOpen()"></span>
+    <span class="login-toggle" (click)="loginOpen()"></span>
+    <div class="menu-toggle" (click)="menuOpen()">
+        <span class="line first"></span>
+        <span class="line second"></span>
+        <span class="line third"></span>
+        <span class="menu">Menu</span>
+    </div>
+</header>
+
+<div class="sticky-menu" [class.scroll]="isStickyMenu">
+    <a [routerLink]="['/']" class="sticky-logo"></a>
+    <app-bt-search-browse-jump home="{{home}}"></app-bt-search-browse-jump>
+    <div class="menu-toggle" (click)="menuOpen()">
+        <span class="line first"></span>
+        <span class="line second"></span>
+        <span class="line third"></span>
+        <span class="menu">Menu</span>
+    </div>
+</div>
+
+<section class="bio-menu-overlay" [class.display]="overlayDisplay" [ngClass]="overlayFade">
+    <div class="close-overlay" (click)="menuClose()"><span class="close">Close</span></div>
+    <div class="left-overlay" (click)="menuClose()"></div>
+    <div class="inner" [ngClass]="innerSlide">
+        <div class="navigation" [class.display]="navigationDisplay">
+            <span class="prev-btn" [class.active]="prevButtonDisplay" (click)="previousMenu()"></span>
+            <span class="mobile-toggles" [ngClass]="mtFade" [class.hide]="mtHide">
+                <span class="register-toggle" (click)="callRegisterMenu()"></span>
+                <span class="login-toggle" (click)="callLoginMenu()"></span>
+            </span>
+            <div class="primary-menu" [ngClass]="primaryMenuFadeToggle">
+                <nav>
+                    <ul>
+                        <li #primaryEl *ngFor="let item of getMenuItems()">
+                            <span class="{{item.class}}" (click)="displaySubmenu(item.id)">{{item.text}}</span>
+                        </li>
+                        <li #primaryEl><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div *ngFor="let pItem of getMenuItems(); let i = index" class="{{pItem.class}}" [ngClass]="pItem.cssClass">
+                <nav>
+                    <ul>
+                        <li *ngFor="let sItem of getSubMenuItems(pItem.id) let j = index" [class.active]="sItem.active">
+                            <a *ngIf="sItem.type === 'external'" href="{{sItem.url}}" target="_blank">{{sItem.text}}</a>
+                            <a *ngIf="sItem.type === 'internal'" [routerLink]="[sItem.url]">{{sItem.text}}</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="login" [class.display]="loginDisplay">
+            <div class="login-form">
+                <form class="user-login-form" method="post" accept-charset="UTF-8">
+                    <h3>Login</h3>
+                    <div class="bio-form-item dark">
+                        <input type="email" name="email" class="form-text required" required="required">
+                        <label>E-mail</label>
+                    </div>
+                    <div class="bio-form-item dark">
+                        <input type="password" name="pass" class="form-text required" required="required">
+                        <label>Password</label>
+                    </div>
+                    <div class="bio-form-actions">
+                        <div class="bio-btn-blue">
+                            <input type="submit" name="op" value="Login" class="form-submit">
+                        </div>
+                        <a href="#">Forgot password?</a>
+                    </div>
+                </form>
+                <h3>Register now for free</h3>
+                <ul class="checkmarks">
+                    <li>Register new tools</li>
+                    <li>Improve existing entries</li>
+                    <li>Improve entry ownership</li>
+                    <li>Request editing rights</li>
+                    <li>Create your own bio.tools subdomain</li>
+                </ul>
+                <div class="bio-btn-blue-stroke">
+                    <span class="register-now" (click)="callRegisterMenu()">Register now</span>
+                </div>
+            </div>
+        </div>
+        <div class="register" [class.display]="registerDisplay">
+            <div class="register-form">
+                <form class="user-register-form" method="post" accept-charset="UTF-8">
+                    <h3>Register now for free</h3>
+                    <div class="bio-form-item dark">
+                        <input type="text" name="fname" class="form-text required" required="required">
+                        <label>First name</label>
+                    </div>
+                    <div class="bio-form-item dark">
+                        <input type="text" name="lname" class="form-text required" required="required">
+                        <label>Last name</label>
+                    </div>
+                    <div class="bio-form-item dark">
+                        <input type="email" name="email" class="form-text required" required="required">
+                        <label>E-mail</label>
+                    </div>
+                    <div class="bio-form-actions">
+                        <div class="bio-btn-blue">
+                            <input type="submit" name="op" value="Register" class="form-submit">
+                        </div>
+                    </div>
+                </form>
+                <ul class="checkmarks">
+                    <li>Register new tools</li>
+                    <li>Improve existing entries</li>
+                    <li>Improve entry ownership</li>
+                    <li>Request editing rights</li>
+                    <li>Create your own bio.tools subdomain</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

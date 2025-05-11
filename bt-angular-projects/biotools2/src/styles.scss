@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+
+// We can set defaults here and then overwrite things in specific components if we need to
+// We should probably shorten the names of the use or just use "use as *"
+@charset "UTF-8";
+@use "config" as *;
+@use "mixins" as *;
+@use "typography" as *;
+@use "utilities" as *;
+@use "doc-elements" as *;
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    // [Note]: Too many delcarations of font size all over the place, need a base one and then use ems or rems to do the rest
+    // unless we actually need pixels for some components or specific html elements
+    -webkit-text-size-adjust: none;
+    -webkit-font-smoothing: antialiased;
+    font-family: "kontrapunkt", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    color: $darkblue;
+    &.no-scroll {
+        overflow: hidden;
+        margin-right: 15px;
+        @include device(phone) {
+            margin-right: 0px;
+        }
+    }
+}
+
+a {
+    text-decoration: none;
+    color: $lightblue;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+ul {
+    &.checkmarks {
+        list-style: none;
+        li {
+            background: url("/assets/images/checkmark.svg") no-repeat center left;
+            padding: 10px 15px 10px 40px;
+            font-weight: 700;
+            font-size: 16px;
+        }
+    }
+}
+
+// [Note]: in prose class we change elements
+.prose {
+    h1,
+    h2,
+    h3 {
+        font-size: 32px;
+        line-height: 40px;
+        font-weight: 400;
+        padding-bottom: 15px;
+    }
+    h4 {
+        font-size: 24px;
+        font-weight: 400;
+        padding-bottom: 25px;
+        border-bottom: 2px solid #d0d2d3;
+        margin-bottom: 15px;
+    }
+    p {
+        color: #66757e;
+        font-size: 18px;
+        line-height: 30px;
+        padding-bottom: 20px;
+    }
+    ul,
+    ol {
+        padding-left: 20px;
+        padding-bottom: 20px;
+        color: #66757e;
+    }
+}

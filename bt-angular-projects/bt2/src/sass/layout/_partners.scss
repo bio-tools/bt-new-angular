@@ -1,0 +1,155 @@
+section.bio-partners-container {
+  padding-top: 125px;
+  @include device(phone) {
+    padding-top: 60px;
+  }
+  h3 {
+    text-align: center;
+    padding-bottom: 80px;
+    @include device(phone) {
+      font-size: 26px;
+      padding-bottom: 60px;
+      padding-left: 80px;
+      padding-right: 80px;
+    }
+    @media screen and (max-width: 475px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  }
+  .logo-container {
+    overflow: hidden;
+    padding-bottom: 90px;
+    padding-top: 50px;
+    .logo-item {
+      height: 80px;
+      width: 20%;
+      float: left;
+      margin-bottom: 50px;
+      @include bezier;
+      &:hover {
+        transform: scale(1.03);
+      }
+      @media screen and (max-width: 1450px) {
+        width: 25%;
+      }
+      @media screen and (max-width: 810px) {
+        width: 50%;
+      }
+      @media screen and (max-width: 360px) {
+        width: 100%;
+      }
+      &.dtu {
+        background: url("../../assets/images/logos/dtu.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.ku {
+        background: url("../../assets/images/logos/ku.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.embl {
+        background: url("../../assets/images/logos/embl.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.aarhus {
+        background: url("../../assets/images/logos/aarhus-uni.jpg") no-repeat center center;
+        background-size: contain;
+      }
+      &.aalborg {
+        background: url("../../assets/images/logos/aalborg-uni.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.sdu {
+        background: url("../../assets/images/logos/sdu.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.swiss {
+        background: url("../../assets/images/logos/sib.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.pasteur {
+        background: url("../../assets/images/logos/institut-pasteur.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.bergen {
+        background: url("../../assets/images/logos/bergen.jpg") no-repeat center center;
+        background-size: contain;
+      }
+      &.bsc {
+        background: url("../../assets/images/logos/bsc.jpg") no-repeat center center;
+        background-size: contain;
+      }
+      &.ceitec {
+        background: url("../../assets/images/logos/ceitec.jpg") no-repeat center center;
+        background-size: contain;
+      }
+      &.tartu {
+        background: url("../../assets/images/logos/tartu.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.irb {
+        background: url("../../assets/images/logos/irb.jpeg") no-repeat center center;
+        background-size: contain;
+      }
+      &.inesc {
+        background: url("../../assets/images/logos/inesc.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.cnrs {
+        background: url("../../assets/images/logos/cnrs.png") no-repeat center center;
+        background-size: contain;
+      }
+      &.be {
+        background: url("../../assets/images/countries/be.svg") no-repeat center center;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.countries-container {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(7%, 1fr));
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  @media screen and (max-width: 1600px){
+	grid-template-columns: repeat(auto-fit, minmax(10%, 1fr));
+  }
+
+  @media screen and (max-width: 1200px){
+	grid-template-columns: repeat(auto-fit, minmax(17%, 1fr));
+  }
+
+  @include device(phone) {
+	grid-template-columns: repeat(auto-fit, minmax(20%, 1fr));
+  }
+  
+}
+
+.country-item img, .country-item span {
+  max-height: 900px;
+  max-width: 110px;
+  padding: 0px !important;
+  display: block;
+  margin: auto;
+  @include bezier;
+  &:hover{
+	transform: scale(1.03);
+  }
+}
+
+img.country-flag{
+  border: 1px solid #d3d3d3;
+}
+
+.country-item a{
+	text-decoration-color: #253a47 !important;
+	
+}
+
+.country-item span {
+	text-align: center;
+	font-size: 14px;
+	color: #253a47;
+}

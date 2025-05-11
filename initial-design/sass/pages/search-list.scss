@@ -1,0 +1,60 @@
+@import 'compass';
+@charset "UTF-8";
+
+@import "base/mixins";
+
+//Styling specific to search list page
+section.bio-top-section {
+	> .bio-search-browse {
+		position: absolute;
+		top: 40px;
+		left: 50%;
+		margin-left: -170px;
+		width: 100%;
+		@include device(tablet){
+			position: static;
+			margin-left: auto;
+			width: auto;
+			margin: 0 auto;
+			padding-top: 40px;
+		}
+		@media screen and (max-width: 415px) {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+	}
+	.bio-search-container {
+		margin: 0 auto;
+		margin-top: 35px;
+		@media screen and (max-width: 930px) {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		//Don't hide on search page
+		&.hide {
+			height: auto;
+			opacity: 1;
+		}
+	}
+	.bio-top-options {
+		padding-top: 70px;
+		.bio-checkbox-switch {
+			padding-left: 40px;
+			@media screen and (max-width: 880px) {
+				padding-left: 20px;
+			}
+		}
+	}
+}
+
+section.search-results-heading {
+	h1 {
+		padding: 55px 0px;
+		text-align: center;
+		border-bottom: 1px solid #d3d8da;
+		@include device(phone){
+			font-size: 32px;
+			padding: 35px 0px;
+		}
+	}
+}

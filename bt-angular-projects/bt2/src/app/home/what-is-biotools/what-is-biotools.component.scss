@@ -1,0 +1,103 @@
+@charset "UTF-8";
+@import "../../../sass/base/mixins";
+
+.main-container {
+  margin-top: 100px;
+  padding: 20px;
+}
+.main-text {
+  background: #fff;
+  border: 1px solid #73c6e0;
+
+  margin-bottom: 20px;
+  h2 {
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+.description-text {
+  font-size: 20px;
+  padding: 20px;
+  text-align: justify;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(32%, 1fr));
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  grid-template-rows: min-content;
+  @include device(phone) {
+    grid-template-columns: 1fr;
+  }
+}
+hr {
+  border-top: 1px solid #54c8e3;
+  border-bottom: 1px solid transparent;
+}
+
+.card {
+  background-color: #fff;
+
+  color: #253a47;
+  padding: 20px;
+  border: 1px solid #54c8e3;
+  transition: all 0.2s ease-in-out;
+}
+
+span.media-links {
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #d9dbde;
+  border-radius: 100px;
+  @include all-easing;
+  background: #fff url("../../../assets/images/bt.svg") no-repeat;
+  top: 25px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card:hover span.media-links {
+  background: #54c8e3 url("../../../assets/images/bt-hover.svg") no-repeat center center;
+  border: 1px solid #54c8e3;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+.card-body {
+  padding-top: 30px;
+  font-size: 20px;
+  text-align: justify;
+}
+
+div.funding-section {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    @media screen and (min-width: 1690px){
+        grid-template-columns: 83px auto;
+    }
+  
+  // grid-row-gap: 20px;
+  grid-column-gap: 25px;
+  // grid-template-rows: min-content;
+}
+
+div.flag {
+  min-height: 50px;
+  height: 100%;
+}
+div.fund-text {
+  font-size: 20px;
+  text-align: justify;
+}

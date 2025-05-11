@@ -1,0 +1,186 @@
+/*
+This whole file is a mess, need to separate things based on components 
+*/
+.sidebar-grid {
+	.left-sidebar {
+		.sidebar-heading {
+			font-weight: 700;
+			font-size: 32px;
+			color: #fff;
+			padding-top: 75px;
+		}
+		.side-bar-description{
+			padding-top: 25px;
+			font-size: 20px;
+			font-weight: 700;
+			a {
+				color: #253a47;
+			}
+		}
+		.sidebar-heading, .side-bar-description {
+			padding-bottom: 25px;
+			padding-left: 40px;
+			padding-right: 75px;
+			@include device(normalscreen){
+				padding-top: 40px;
+		    	padding-bottom: 40px;
+		    	padding-left: 30px;
+		    	padding-right: 75px;
+			}
+			@media screen and (max-width: 440px) {
+				padding-right: 30px;
+			}
+		}
+	}
+	
+}
+
+section.sidebar-grid {
+	position: relative;
+	display: flex;
+  	flex-direction: row;
+ 	@include device(normalscreen){
+  		display: block;
+  	}
+	&.subtopic {
+		section.left-sidebar {
+			overflow: hidden;
+			@include all-easing;
+			@include device(normalscreen){
+				display: none;
+			}
+			&:hover {
+				background: $lightbluehover;
+				a {
+					// @include scale(1.1);
+					transform: scale(1.1);
+				}
+			}
+			a {
+				display: block;
+				background: url("../../assets/images/prev-arrow-large.svg") no-repeat center center;
+				position: absolute;
+				left: 0px;
+				right: 0px;
+				top: 0px;
+				bottom: 0px;
+				@include all-easing;
+			}
+		}
+	}
+	&.filter {
+		section.left-sidebar {
+			padding: 130px 50px 130px 50px;
+		}
+	}
+	&.collapse {
+		section.left-sidebar {
+			width: 0px;
+			min-width: 0px;
+			padding: 0px;
+			opacity: 0;
+			@include device(normalscreen){
+				display: none;
+			}
+		}
+		.expand-toggle {
+			left: 0px;
+		}
+	}
+	.expand-toggle {
+		display: block;
+		width: 70px;
+		height: 40px;
+		background: url("../../assets/images/filter-btn.svg") no-repeat right center;
+		@include all-easing;
+		position: absolute;
+		opacity: 0.85;
+		top: -95px;
+		cursor: pointer;
+		left: -70px;
+		@include device(normalscreen){
+			top: -75px;
+		}	
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.sort-toggle-mobile {
+		display: block;
+		width: 70px;
+		height: 40px;
+		background: url("../../assets/images/sort-btn.svg") no-repeat right center;
+		@include all-easing;
+		position: absolute;
+		opacity: 0.85;
+		top: -75px;
+		cursor: pointer;
+		right: 0px;
+		display: none;
+		@include device(normalscreen){
+			display: block;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+	.edit-cols-toggle {
+		display: block;
+		width: 70px;
+		height: 40px;
+		background: url("../../assets/images/edit-cols-btn.svg") no-repeat right center;
+		@include all-easing;
+		position: absolute;
+		opacity: 0.85;
+		top: -95px;
+		cursor: pointer;
+		right: 0px;
+		@include device(normalscreen){
+			top: -100px;
+		}
+		&:hover {
+			opacity: 1;
+		}
+	}
+	section.left-sidebar {
+		min-width: 400px;
+		width: 400px;
+		background: $lightblue;
+		color: #fff;
+		position: relative;
+		overflow: hidden;
+		@include slow-easing;
+		@include device(normalscreen){
+			position: static;
+			width: 100%;
+			min-width: 100%;
+		}
+		.collapse-toggle {
+			display: block;
+			width: 75px;
+			height: 40px;
+			background: url("../../assets/images/collapse-toggle.svg") no-repeat right top;
+			opacity: 0.5;
+			@include all-easing;
+			position: absolute;
+			right: 0px;
+			top: 40px;
+			cursor: pointer;
+			&:hover {
+				opacity: 1;
+			}
+		}
+		h3 {
+			font-size: 22px;
+			padding-bottom: 30px;
+		}
+		.bio-form-actions {
+			padding-top: 20px;
+		}
+	}
+	section.main-content {
+		overflow: hidden;
+		width: 100%;
+		position: relative;
+	}
+}

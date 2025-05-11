@@ -1,0 +1,104 @@
+section.bio-top-section > div.sticky-menu {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: -46px;
+	z-index: 25;
+	height: 46px;
+	overflow: hidden;
+	opacity: 0;
+	@include all-easing;
+	@include device(tablet){
+		display: none;
+	}
+	&.scroll {
+		opacity: 1;
+		top: 0px;
+		@include device(tablet){
+			display: none;
+		}
+	}
+	.sticky-logo {
+		display: block;
+		width: 170px;
+		height: 46px;
+		background: url("../images/site-logo-sticky.svg") no-repeat center center;
+		position: absolute;
+		left: 0px;
+		top: 0px;
+	}
+	.bio-search-browse {
+		.search-toggle {
+			@include border-radius(0px 0px 0px 25px);
+			background: #fff;
+			&.active {
+				background: $darkblue;
+				color: $lightblue;
+			}
+		}
+		.browse-toggle {
+			@include border-radius(0px 0px 25px 0px);
+			background: #fff;
+			&.active {
+				background: $darkblue;
+				color: $lightblue;
+			}
+		}
+	}
+	.menu-toggle {
+		position: absolute;
+		right: 0px;
+		top: 0px;
+		height: 46px;
+		width: 170px;
+		background: $darkblue;
+		@include border-radius(0px 0px 0px 25px);
+		cursor: pointer;
+		@include all-easing;
+		&:hover {
+			background: #15252d;
+			.line {
+				&.first {
+					top: 13px;
+				}
+				&.second {
+					@include scale(1.2);
+				}
+				&.third {
+					top: 31px;
+				}
+			}
+			.menu {
+				padding-left: 85px;
+			}
+		}
+		.line {
+			display: block;
+			height: 2px;
+			background: $lightblue;
+			width: 18px;
+			position: absolute;
+			left: 45px;
+			@include border-radius(10px);
+			@include all-easing;
+			&.first {
+				top: 16px;
+			}
+			&.second {
+				top: 22px;
+			}
+			&.third {
+				top: 28px;
+			}
+		}
+		.menu {
+			color: $lightblue;
+			font-size: 16px;
+			font-weight: 700;
+			padding-left: 80px;
+			padding-top: 13px;
+			display: block;
+			@include all-easing;
+		}
+	}
+}

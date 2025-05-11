@@ -1,0 +1,39 @@
+<header id="header">
+    <p *ngIf="authenticatedUser">Welcome <b>{{authenticatedUser.username}}</b>, your email is: <b>{{authenticatedUser.email}}</b></p>
+    <!-- 
+        [Note]: We need to decrease / change this when we resolve a request....
+        We should probably emit a number and the requests count should that we show here should subscribe to that number
+            We emit number when we retrieve a new user
+            We emit number of uncompleted requests when we retrieve requests / resolve a request
+     -->
+    <p *ngIf="authenticatedUser">You have received <a [routerLink]="['user','requests']"><b>{{requestCount}}</b> request(s)</a>.</p> 
+    <nav>
+        <ul>
+            <li><a [routerLink]="['/']">Home</a></li>
+            <li><a [routerLink]="['about']">About</a></li>
+            <li *ngIf="!isAuthenticated"><a [routerLink]="['login']">Login</a></li>
+            <li *ngIf="isAuthenticated"><a (click)="onLogout()">Logout</a></li>
+            <li *ngIf="!isAuthenticated"><a [routerLink]="['signup']">Signup</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['user','profile']">Profile</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['user','requests']">Requests</a></li>
+            <li><a [routerLink]="['t']">Tools</a></li>
+            <li><a [routerLink]="['domains']">Domains</a></li>
+            <li><a [routerLink]="['communities']">Communities</a></li>
+            <li><a [routerLink]="['stats']">Stats</a></li>
+            <li><a [routerLink]="['jaspar']">Jaspar Tool</a></li>
+            <li><a [routerLink]="['blast']">BLAST Tool</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['edit-tool']">New Tool</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['register']">New Tool Register Old Link</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['edit-tool','blast']">Edit BLAST</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['edit-tool','jaspar']">Edit JASPAR</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['blast','edit']">Edit BLAST Old Link</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['jaspar','edit']">Edit JASPAR Old Link</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['domains','manage']">Manage Domains</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['domain-manager']">Domain Manager Old</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['edit-domain']">New Domain</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['edit-domain/covid-19']">Edit COVID-19 Domain</a></li>
+            <li *ngIf="isAuthenticated"><a [routerLink]="['edit-domain/rare-diseases']">Edit Rare Diseases Domain</a></li>
+        </ul>
+    </nav>
+</header>
+<hr>

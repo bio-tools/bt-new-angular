@@ -1,0 +1,106 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import 'compass';
+@charset "UTF-8";
+
+@import "base/mixins";
+@import "base/config";
+@import "base/utilities";
+@import "base/typography";
+@import "base/doc-elements";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/sidebargrid";
+@import "layout/onecolgrid";
+@import "layout/twocolgrid";
+@import "layout/threecolgrid";
+@import "layout/browsetopicgrid";
+@import "layout/browsesubtopicgrid";
+@import "layout/publicationdetailsgrid";
+@import "layout/overlay";
+@import "layout/stickymenu";
+@import "layout/searchresults";
+@import "layout/partners";
+
+
+@import "components/components";
+@import "components/form-elements";
+
+/* DEFAULT */
+* {
+  @include box-sizing(border-box);
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'kontrapunkt', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $darkblue;
+  &.no-scroll {
+    overflow: hidden;
+    margin-right: 15px;
+    @include device(phone){
+      margin-right: 0px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $lightblue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  &.checkmarks {
+    list-style: none;
+    li {
+      background: url("../images/checkmark.svg") no-repeat center left;
+      padding: 10px 15px 10px 40px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}
+
+.prose {
+  h1, h2, h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    padding-bottom: 15px;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #d0d2d3;
+    margin-bottom: 15px;
+  }
+  p {
+    color: #66757e;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+  ul, ol {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: #66757e;
+  }
+}

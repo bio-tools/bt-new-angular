@@ -1,0 +1,57 @@
+<!-- We need to see if we add the login username and password here or in a separate component -->
+<p style="color: red;" *ngIf="error">
+    {{ error | json }}    
+</p>
+<form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+    <div>
+        <label for="username">Username:</label>
+        <input 
+            type="text" 
+            id="username"
+            ngModel
+            name="username"
+            required
+        >
+        <div *ngIf="error && error.username">
+            <span style="color: red;" *ngFor="let e of error.username">{{e}}</span>
+        </div>
+        
+
+    </div>
+    <div>
+        <label for="email">Email:</label>
+        <input 
+            type="email" 
+            id="email"
+            ngModel
+            name="email"
+            required
+            email
+        >
+    </div>
+    <div>
+        <label for="password1">Password:</label>
+        <input 
+            type="password" 
+            id="password1"
+            ngModel
+            name="password1"
+            required
+            minlength="8"
+        >
+    </div>
+    <div>
+        <label for="password2">Repeat Password:</label>
+        <input 
+            type="password" 
+            id="password2"
+            ngModel
+            name="password2"
+            required
+            minlength="8"
+        >
+    </div>
+    <div>
+        <button type="submit" [disabled]="!signupForm.valid">Signup</button>&nbsp;&nbsp; Already have an account? <a [routerLink]="['/','login']">Login with your account</a>
+    </div>
+</form>

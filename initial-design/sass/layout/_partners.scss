@@ -1,0 +1,67 @@
+section.bio-partners-container {
+	padding-top: 125px;
+	@include device(phone){
+		padding-top: 60px;
+	}
+	h3 {
+		text-align: center;
+		padding-bottom: 80px;
+		@include device(phone){
+			font-size: 26px;
+			padding-bottom: 60px;
+			padding-left: 80px;
+			padding-right: 80px;
+		}
+		@media screen and (max-width: 475px) {
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+	.logo-container {
+		overflow: hidden;
+		padding-bottom: 90px;
+		.logo-item {
+			height: 90px;
+			width: 12.5%;
+			float: left;
+			margin-bottom: 30px;
+			@include bezier;
+			&:hover {
+				@include scale(1.03);
+			}
+			@media screen and (max-width: 1450px) {
+				width: 25%;
+			}
+			@media screen and (max-width: 810px) {
+				width: 50%;
+			}
+			@media screen and (max-width: 360px) {
+				width: 100%;
+			}
+			&.dtu {
+				background: url("../images/logos/dtu.png") no-repeat center center;
+			}
+			&.ku {
+				background: url("../images/logos/ku.png") no-repeat center center;
+			}
+			&.embl {
+				background: url("../images/logos/embl.png") no-repeat center center;
+			}
+			&.aarhus {
+				background: url("../images/logos/aarhus-uni.png") no-repeat center center;
+			}
+			&.aalborg {
+				background: url("../images/logos/aalborg-uni.png") no-repeat center center;
+			}
+			&.sdu {
+				background: url("../images/logos/sdu.png") no-repeat center center;
+			}
+			&.swiss {
+				background: url("../images/logos/swiss-institute.png") no-repeat center center;
+			}
+			&.pasteur {
+				background: url("../images/logos/institut-pasteur.png") no-repeat center center;
+			}
+		}
+	}
+}

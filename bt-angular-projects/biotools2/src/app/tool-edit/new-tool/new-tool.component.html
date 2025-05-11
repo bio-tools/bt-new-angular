@@ -1,0 +1,19 @@
+<p>new-tool works!</p>
+
+<h3>Edit JSON</h3>
+
+<!-- [Note]: need to see if tool|json will be ok or if we need some other strategy -->
+<bt-json-editor [data]="tool|json" (dataChange)="updateToolObject($event)"></bt-json-editor>
+
+<h3>View JSON</h3>
+<pre class="scroll-box">{{tool | json}}</pre>
+
+<button (click)="addDot()">Add a dot to description</button>
+<hr>
+<button (click)="onValidate()">Validate</button> | <button (click)="onSave()">Save</button>
+<p style="color: red;" *ngIf="error">
+    {{ error | json }}    
+</p>
+
+
+

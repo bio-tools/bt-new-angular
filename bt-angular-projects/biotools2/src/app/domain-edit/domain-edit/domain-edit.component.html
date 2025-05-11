@@ -1,0 +1,29 @@
+<p>domain-edit works!</p>
+
+<p>
+    We are editing the <b>{{domainID}}</b> domain.
+</p>
+<h3>Edit JSON</h3>
+<bt-json-editor [data]="domain|json" (dataChange)="updateToolObject($event)"></bt-json-editor>
+<br>
+<button (click)="putRandomTitle()">Generate Random Title</button>
+<button (click)="onSave()">Save</button>
+<button (click)="onDelete()">Delete</button>
+<button (click)="goToDomainPage()">Go to domain</button>
+<p style="color: red;" *ngIf="error">
+    {{ error | json }}    
+</p>
+
+<br>
+
+
+
+<section *ngIf="domain">
+    <h1>Contents</h1>
+    <pre class="scroll-box">{{domain | json}}</pre>    
+</section>
+
+<!-- [Note]: Need to show spinner or wait or something before getting domain , otherwise this can be seen before loading domain -->
+<section *ngIf="!domain">
+    <h1>Could not find domain with id: {{domainID}}</h1>  
+</section>

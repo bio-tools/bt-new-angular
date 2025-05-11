@@ -1,0 +1,66 @@
+<app-bt-spinner *ngIf="spinnerService.isLoading()" datalabel="home"></app-bt-spinner>
+
+<!--top part with the backgroun image-->
+<section class="bio-top-section">
+
+    <!--Header part-->
+    <app-bt-header home="true"></app-bt-header>
+
+
+    <h1 class="top-text-front">Essential scientific and technical information about software tools, databases and
+        services for bioinformatics and the life sciences.</h1>
+
+    <!-- The browse and search buttons (search|browse), with css based on _components.scss
+    should be its own component-->
+    <!-- <div class="bio-search-browse">
+        <div class="search-toggle active" id="toggle-search">Search</div>
+        <a class="browse-toggle" id="toggle-browse">Browse</a>
+    </div> -->
+
+    <app-bt-search-browse-jump home="true"></app-bt-search-browse-jump>
+
+    <!-- The main searchbar, with css based on _components.scss
+    should be its own component with dropdown suggestions and everything-->
+
+    <app-bt-search [autorefresh]="false"></app-bt-search>
+
+    <app-bt-what-is-biotools></app-bt-what-is-biotools>
+
+</section>
+
+<app-bt-edam-start-terms></app-bt-edam-start-terms>
+
+<!--perhaps it should be it's own component, for reusability on another page-->
+<section class="bio-partners-container">
+    <h3>Supported by ELIXIR Nodes</h3>
+    <div class="countries-container">
+        <div class="country-item"  *ngFor="let p of partners">
+            <a href="{{node_link}}{{p.nodeLinkName}}" target="_blank">
+                <img class="img-responsive country-flag" src="../../assets/images/countries/{{p.flag}}" alt="{{p.name}}" title="{{p.name}}">
+                <span>{{p.name}}</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!--perhaps it should be it's own component, for reusability on another page-->
+<section class="bio-partners-container">
+    <h3>Led by ELIXIR Denmark & partners</h3>
+    <div class="logo-container">
+        <a href="https://www.dtu.dk/english" target="_blank" class="logo-item dtu"></a>
+        <a href="https://www.ku.dk/english/" target="_blank" class="logo-item ku"></a>
+        <a href="http://international.au.dk/" target="_blank" class="logo-item aarhus"></a>
+        <a href="https://www.en.aau.dk/" target="_blank" class="logo-item aalborg"></a>
+        <a href="https://www.sdu.dk/en" target="_blank" class="logo-item sdu"></a>
+        <a href="https://www.pasteur.fr/en" target="_blank" class="logo-item pasteur"></a>
+        <a href="https://www.uib.no/en" target="_blank" class="logo-item bergen"></a>
+        <a href="https://www.bsc.es/" target="_blank" class="logo-item bsc"></a>
+        <a href="https://www.ceitec.eu/" target="_blank" class="logo-item ceitec"></a>
+        <a href="https://www.ut.ee/en" target="_blank" class="logo-item tartu"></a>
+        <a href="https://www.embl.org/" target="_blank" class="logo-item embl"></a>
+        <a href="https://www.sib.swiss/" target="_blank" class="logo-item swiss"></a>
+        <a href="https://www.irbbarcelona.org/en" target="_blank" class="logo-item irb"></a>
+        <a href="https://www.inesc-id.pt/" target="_blank" class="logo-item inesc"></a>
+        <a href="http://www.cnrs.fr/" target="_blank" class="logo-item cnrs"></a>
+    </div>
+</section>

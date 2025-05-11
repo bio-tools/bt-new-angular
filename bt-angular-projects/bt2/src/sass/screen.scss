@@ -1,0 +1,151 @@
+.purple {
+  background-color: purple !important;
+  font-size: 8px !important;
+  padding: 100px !important;
+}
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@charset "UTF-8";
+
+@import "base/mixins";
+@import "base/config";
+@import "base/utilities";
+@import "base/typography";
+@import "base/doc-elements";
+
+// @import "layout/header";
+// @import "layout/footer";
+@import "layout/sidebargrid";
+// @import "layout/onecolgrid";
+// @import "layout/twocolgrid";
+// @import "layout/threecolgrid";
+@import "layout/browsetopicgrid";
+// @import "layout/browsesubtopicgrid";
+// @import "layout/publicationdetailsgrid";
+
+//This is used in the clicking of the menu button, login and register
+@import "layout/overlay";
+// so that the dialogs with register, menu and login appear
+
+// This is used in the homepage and other pages 
+@import "layout/stickymenu";
+// for the top sticky menu for search|browse , logo(left) and menu (right)
+
+// @import "layout/searchresults";
+@import "layout/partners";
+
+// This is used in the homepage and other pages
+@import "components/components";
+// for browse and search buttons and for main searchbar
+
+
+// this is used for all the form elements including input, checkboxes, buttons, radio buttons etc
+@import "components/form-elements";
+
+/* DEFAULT */
+* {
+  // @include box-sizing(border-box);
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  -webkit-text-size-adjust: none;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'kontrapunkt', Arial, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: $darkblue;
+  &.no-scroll {
+    overflow: hidden;
+    margin-right: 15px;
+    @include device(phone){
+      margin-right: 0px;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+  color: $lightblue;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+ul {
+  &.checkmarks {
+    list-style: none;
+    li {
+      background: url("../assets/images/checkmark.svg") no-repeat center left;
+      padding: 10px 15px 10px 40px;
+      font-weight: 700;
+      font-size: 16px;
+    }
+  }
+}
+
+.prose {
+  h1, h2, h3 {
+    font-size: 32px;
+    line-height: 40px;
+    font-weight: 400;
+    padding-bottom: 15px;
+  }
+  h4 {
+    font-size: 24px;
+    font-weight: 400;
+    padding-bottom: 25px;
+    border-bottom: 2px solid #d0d2d3;
+    margin-bottom: 15px;
+  }
+  p {
+    color: #66757e;
+    font-size: 18px;
+    line-height: 30px;
+    padding-bottom: 20px;
+  }
+  ul, ol {
+    padding-left: 20px;
+    padding-bottom: 20px;
+    color: #66757e;
+  }
+}
+
+span.search-highlight {
+  font-weight: bold;
+  color:black;
+  //background: #fff9c4;
+  background: #e6f1f7;
+  //background: #ffedd1;
+}
+
+
+/* Styles for tab labels */
+.mat-tab-label {
+  min-width: 25px !important;
+}
+
+/* Styles for the active tab label */
+.mat-tab-label.mat-tab-label-active {
+  min-width: 25px !important;
+}
+
+
+// .mat-tab-group{
+//   width: 98vw !important;
+//   margin-left: -4vw !important;
+//   //   position: absolute !important;
+//   //   left: -4.5vw !important
+    
+// }
+  

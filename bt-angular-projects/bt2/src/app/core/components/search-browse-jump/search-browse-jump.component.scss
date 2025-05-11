@@ -1,0 +1,49 @@
+@charset "UTF-8";
+@import "../../../../sass/base/mixins";
+.search-toggle {
+    text-align: right;
+    // border-radius: 40px 0px 0px 40px;
+    border-radius: 40px 0px 0px 40px;
+    &:after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        left: 32px;
+        top: 5px;
+        background: url('../../../../assets/images/search-icon.svg') no-repeat center center;
+        @media screen and (max-width: 390px) {
+            left: 10px;
+            top: 3px;
+        }
+    }
+    &.active {
+        &:after {
+            background: url('../../../../assets/images/search-icon-active.svg') no-repeat center center;
+        }
+    }
+}
+.browse-toggle {
+    border-radius: 0px 40px 40px 0px;
+    color: $darkblue;
+    &:after {
+        content: "";
+        display: block;
+        width: 35px;
+        height: 35px;
+        position: absolute;
+        right: 30px;
+        top: 5px;
+        background: url('../../../../assets/images/browse-icon.svg') no-repeat center center;
+        @media screen and (max-width: 390px) {
+            right: 10px;
+            top: 3px;
+        }
+    }
+    &.active {
+        &:after {
+            background: url('../../../../assets/images/browse-icon-active.svg') no-repeat center center;
+        }
+    }
+}

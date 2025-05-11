@@ -1,0 +1,42 @@
+.three-col-grid {
+	.grid-row {
+		overflow: hidden;
+		padding-bottom: 50px;
+		@include device(phone){
+			padding-bottom: 0px;
+		}
+		.grid-column {
+			width: 33.333%;
+			float: left;
+			padding: 0px 25px;
+			p {
+				word-wrap: break-word;
+			}
+			@include device(phone){
+				width: 100%;
+				float: none;
+				padding: 0px;
+				padding-bottom: 20px;
+			}
+			&.first {
+				padding: 0px 49px;
+				padding-left: 0px;
+				@include device(phone){
+					padding: 0px;
+					padding-bottom: 20px;
+				}
+			}
+			&.third {
+				padding: 0px 49px;
+				padding-right: 0px;
+				@include device(phone){
+					padding: 0px;
+					padding-bottom: 20px;
+				}
+			}
+			p {
+				font-size: 20px;
+			}
+		}
+	}
+}

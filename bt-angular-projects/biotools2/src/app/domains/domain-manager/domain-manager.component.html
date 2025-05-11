@@ -1,0 +1,31 @@
+<p>domain-manager works!</p>
+<div *ngIf="domainsSummary">
+    <p>
+        You are managing <b>{{domainsSummary.length}}</b> domains
+    </p>
+
+    <table>
+        <thead>
+            <tr>
+                <td>Domain Name</td>
+                <td>Resources count</td>
+                <td>Actions</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let d of domainsSummary">
+                <td><a [routerLink]="['/','t']" [queryParams]="{domain: d.name}">{{d.name}}</a></td>
+                <td>{{d.resourcesCount}}</td>
+                <td>
+                    <a [routerLink]="['/','edit-domain',d.name]">Edit</a> | <button (click)="deleteDomain(d.name)">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <hr>
+    <div>
+        <a  [routerLink]="['/','edit-domain']">Create new domain</a>
+    </div>
+    <pre class="scroll-box">{{domainsSummary | json}}</pre> 
+    
+</div>

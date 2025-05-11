@@ -1,0 +1,7 @@
+<p>domains-list works!</p>
+<div *ngIf="domains">
+    <p>
+        Showing all <b>{{domains.count}}</b> domains
+    </p>
+    <pre class="scroll-box">{{domains.data | json}}</pre> 
+</div>

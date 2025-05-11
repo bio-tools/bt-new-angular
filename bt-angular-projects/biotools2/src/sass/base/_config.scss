@@ -1,0 +1,25 @@
+// [Note]: Maybe we should use regular css custom properties (variables) since we can do more with them, 
+//         we need to make sure we have browser support
+/* Base config variables */
+
+$base-background-color:         white;
+
+$base-font-size:                1em;
+$base-line-height:              1.3;
+
+$base-border-radius:            1px;
+
+$base-heading-line-height:      1.25;
+$base-heading-h1:               $base-font-size * 2.25;
+$base-heading-h2:               $base-font-size * 2;
+$base-heading-h3:               $base-font-size * 1.75;
+$base-heading-h4:               $base-font-size * 1.5;
+$base-heading-h5:               $base-font-size * 1.25;
+$base-heading-h6:               $base-font-size;
+
+/* VARIABLES */
+
+$main-width: 1500px;
+$darkblue: #253a47;
+$lightblue: #33d5ef;
+$lightbluehover: #37b4d1;

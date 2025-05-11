@@ -1,0 +1,12 @@
+<div class="autocomplete-tab">
+    <ul *ngIf="items.length > 0">
+        <li *ngFor="let item of items; index as i" 
+        (click)="clickedItem(i)" 
+        [class.highlighted]="checkIndex(i)" 
+        (mouseover)="onMouseover(i)" 
+        (mouseout)="onMouseout(i)" [innerHTML]="item | highlight:query"></li>
+    </ul>
+    <div *ngIf="items.length === 0">
+        <p>No suggestions</p>
+    </div>
+</div>

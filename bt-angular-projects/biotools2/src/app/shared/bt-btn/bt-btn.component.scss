@@ -1,0 +1,29 @@
+@use "config" as *;
+@use "mixins" as *;
+
+:host(span), :host(a), :host(input), :host(button) {
+    display: inline-block;
+    padding: 12px 34px;
+    min-width: 200px;
+    background: $lightblue;
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    font-family: 'kontrapunkt', Arial, sans-serif;
+    border-radius: 40px;
+    border: 2px solid $lightblue;
+    cursor: pointer;
+    @include all-easing;
+    text-align: center;
+    line-height: 22px;
+    -webkit-appearance: none;
+    &:hover {
+        background: none;
+        color: $lightblue;
+        text-decoration: none;
+    }
+}
+
+:host(button:disabled), :host(button[disabled]){
+    @include disabled-button;
+}

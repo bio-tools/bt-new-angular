@@ -1,0 +1,10 @@
+<!-- The <section class="bio-top-section"> is required before header , need to fix this  -->
+<section class="bio-top-section">
+    <app-bt-header></app-bt-header>
+
+    <app-bt-search-browse-jump></app-bt-search-browse-jump>
+
+    <app-bt-search [autorefresh]="false"></app-bt-search>
+</section>
+<app-bt-spinner *ngIf="spinnerService.isLoading()" datalabel="stats"></app-bt-spinner>
+<pre class="scroll-box">{{stats | json}}</pre>

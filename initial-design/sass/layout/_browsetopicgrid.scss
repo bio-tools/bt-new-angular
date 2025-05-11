@@ -1,0 +1,145 @@
+section.bio-browse-topics {
+	background: #fafafa;
+	.browse-topic {
+		.topic-heading {
+			border-bottom: 1px solid #d3d8da;
+			overflow: hidden;
+			position: relative;
+			a {
+				font-size: 32px;
+				display: block;
+				color: $darkblue;
+				padding: 70px 130px 70px 180px;
+				position: relative;
+				@include all-easing;
+				@include device(phone){
+					font-size: 26px;
+					padding: 57px 105px 57px 140px;
+				}
+				@media screen and (max-width: 400px) {
+					padding: 57px 105px 57px 110px;
+					font-size: 24px;
+				}
+				&:hover {
+					background: #e6f6f9;
+					text-decoration: none;
+					@include scale(1.01);
+				}
+				&:after {
+					content: "";
+					display: block;
+					position: absolute;
+					width: 80px;
+					right: 0px;
+					top: 0px;
+					bottom: 0px;
+					background: #e6f6f9 url("../images/blue-arrow-small.svg") no-repeat center center;
+					@media screen and (max-width: 400px) {
+						width: 50px;
+					}
+				}
+				.icon {
+					display: block;
+					position: absolute;
+					left: 35px;
+					top: 50%;
+					height: 120px;
+					width: 120px;
+					-webkit-transform: translateY(-50%);
+			    -moz-transform: translateY(-50%);
+			    -ms-transform: translateY(-50%);
+			    transform: translateY(-50%);
+					@include bezier;
+					@include device(phone){
+						-webkit-background-size: contain !important; 
+						-moz-background-size: contain !important; 
+						-o-background-size: contain !important; 
+						background-size: contain !important;
+						width: 100px;
+						height: 100px;
+						left: 20px;
+					}
+					@media screen and (max-width: 400px) {
+						width: 70px;
+						height: 70px;
+					}
+				}
+			}
+		}
+		.subtopics {
+			overflow: auto;
+			position: relative;
+			&:after {
+				content: "";
+				display: block;
+				height: 1px;
+				background: #d3d8da;
+				position: absolute;
+				right: 0px;
+				left: 0px;
+				bottom: 0px;
+			}
+			ul {
+				list-style: none;
+				display: flex;
+    		flex-flow: row wrap;
+				li {
+					width: 50%;
+					border-bottom: 1px solid #d3d8da;
+					overflow: hidden;
+					position: relative;
+					@media screen and (max-width: 970px) {
+						width: 100%;
+						float: none;
+					}
+					&:nth-child(odd) {
+						&:before {
+							content: "";
+							display: block;
+							width: 1px;
+							position: absolute;
+							right: 0px;
+							top: 0px;
+							bottom: 0px;
+							background: #d3d8da;
+							z-index: 1;
+							@media screen and (max-width: 970px) {
+								display: none;
+							}
+						}
+					}
+					a {
+						display: block;
+						padding: 26px 110px 26px 40px;
+						font-size: 22px;
+						position: relative;
+						@include all-easing;
+						overflow: hidden;
+						height: 100%;
+						&:hover {
+							text-decoration: none;
+							background: #e3e9ed;
+							color: $darkblue;
+							&:after {
+								background: #e3e9ed url("../images/blue-arrow-small.svg") no-repeat center center;
+							}
+						}
+						&:after {
+							content: "";
+							display: block;
+							position: absolute;
+							width: 80px;
+							right: 0px;
+							top: 0px;
+							bottom: 0px;
+							background: #e6f6f9 url("../images/blue-arrow-small.svg") no-repeat center center;
+							@media screen and (max-width: 400px) {
+								width: 50px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}

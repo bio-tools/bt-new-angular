@@ -1,0 +1,230 @@
+@charset "UTF-8";
+@import "../../sass/base/mixins";
+
+footer#footer {
+	border-top: 1px solid #d3d8da;
+	padding-top: 40px;
+	padding-bottom: 80px;
+	> .inner {
+		position: relative;
+		margin: 0 auto;
+		padding: 0px 30px;
+		@media screen and (max-width:1515px) {
+			width: 100%;
+		}
+		
+		.site-logo-container {
+			.site-logo {
+				display: block;
+				width: 234px;
+				height: 50px;
+				background: url("../../assets/images/site-logo.svg") no-repeat;
+				@include all-easing;
+				&:hover {
+					transform: scale(1.03);
+					opacity: 0.8;
+				}
+				@include device(phone){
+					@include bgcontain;
+					width: 205px;
+					height: 44px;
+				}
+			}
+		}
+		nav {
+			display: block;
+			overflow: hidden;
+			ul {
+				list-style: none;
+				li {
+					float: left;
+					@include device(phone){
+						float: none;
+					}
+					&:first-child {
+						a {
+							padding-left: 0px;
+						}
+					}
+					a {
+						padding: 0px 20px;
+						@include device(phone){
+							padding: 10px 0px;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		
+		nav.secondary-nav {
+			padding-top: 30px;
+			@include device(phone){
+				padding-top: 50px;
+			}
+			ul {
+				li {
+					a {
+						font-size: 22px;
+						@include device(phone){
+							padding: 4px 0px;
+						}
+					}
+				}
+			}
+		}
+		div.social-links {
+			position: absolute;
+			right: 30px;
+			bottom: 10px;
+			width: 305px;
+			@include device(phone){
+				width: 100%;
+				position: static;
+				overflow: hidden;
+				padding-top: 60px;
+			}
+			.social {
+				padding-right: 20px;
+				float: right;
+				padding-top: 12px;
+				@media screen and (max-width: 360px) {
+					float: none;
+					overflow: hidden;
+					padding-bottom: 30px;
+				}
+				> a {
+					display: block;
+					float: right;
+					width: 50px;
+					height: 50px;
+					border: 1px solid #d9dbde;
+					border-radius: 100px;
+					@include all-easing;
+					margin-right: 10px;
+					&:hover {
+						&.twitter {
+							background: #54c8e3 url("../../assets/images/twitter-hover.svg") no-repeat center center;
+							border: 1px solid #54c8e3;
+						}
+					}
+					&.twitter {
+						background: url("../../assets/images/twitter.svg") no-repeat center center;
+					}
+					
+				}
+			}
+			.other {
+				float: right;
+				@media screen and (max-width: 360px) {
+					float: none;
+                }
+
+				a.elixir {
+					display: block;
+					width: 98px;
+					height: 72px;
+                    background: url("../../assets/images/elixir.png") no-repeat center center;
+
+                    &:hover {
+                        transform: scale(1.03);
+                        opacity: 0.8;
+                    }
+				}
+			}
+		}
+	}
+}
+
+
+.footer-container {
+    
+    display: grid;
+    background: transparent;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    grid-template-rows: min-content;
+
+
+    margin-bottom: 50px;
+
+    > .cell {
+        text-align: left;
+        padding: 2rem;  
+
+        > ul > li {
+            list-style: none;
+            padding-top: 25px;
+			@include device(phone){
+				padding-top: 40px;
+            }
+            
+            > a{
+                font-size: 22px;
+            }
+        }
+    }
+
+}
+
+
+div.media-links{
+	margin-bottom: 20px;
+	> a {
+		display: block;
+		
+		width: 50px;
+		height: 50px;
+		border: 1px solid #d9dbde;
+		border-radius: 100px;
+		@include all-easing;
+		margin-right: 10px;
+		&:hover {
+			&.twitter {
+				background: #54c8e3 url("../../assets/images/twitter-hover.svg") no-repeat center center;
+				border: 1px solid #54c8e3;
+			}
+			&.linkedin {
+				background: #54c8e3 url("../../assets/images/linkedin-hover.svg") no-repeat center center;
+				border: 1px solid #54c8e3;
+			}
+			&.github {
+				background: #54c8e3 url("../../assets/images/github-hover.svg") no-repeat center center;
+				border: 1px solid #54c8e3;
+			}
+			&.readthedocs {
+				background: #54c8e3 url("../../assets/images/readthedocs-hover.svg") no-repeat center center;
+				border: 1px solid #54c8e3;
+			}
+			&.bt {
+				background: #54c8e3 url("../../assets/images/bt-hover.svg") no-repeat center center;
+				border: 1px solid #54c8e3;
+			}
+			&.support {
+				background: #54c8e3 url("../../assets/images/support-hover.svg") no-repeat center center;
+				border: 1px solid #54c8e3;
+			}
+		}
+		&.twitter {
+			background: url("../../assets/images/twitter.svg") no-repeat center center;
+		}
+		&.linkedin {
+			background: url("../../assets/images/linkedin.svg") no-repeat center center;
+		}
+		&.github {
+			background: url("../../assets/images/github.svg") no-repeat center center;
+		}
+		
+		&.readthedocs {
+			background: url("../../assets/images/readthedocs.svg") no-repeat center center;
+		}
+		&.bt {
+			background: url("../../assets/images/bt.svg") no-repeat center center;
+		}
+		&.support {
+			background: url("../../assets/images/support.svg") no-repeat center center;
+		}
+	}
+}

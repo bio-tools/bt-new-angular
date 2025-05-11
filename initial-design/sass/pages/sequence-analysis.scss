@@ -1,0 +1,40 @@
+@import 'compass';
+@charset "UTF-8";
+
+@import "base/mixins";
+
+//Styling specific to sequence analysis page
+section.bio-top-section {
+	> .bio-search-browse {
+		position: absolute;
+		top: 40px;
+		left: 50%;
+		margin-left: -170px;
+		width: 100%;
+		@include device(tablet){
+			position: static;
+			margin-left: auto;
+			width: auto;
+			margin: 0 auto;
+			padding-top: 40px;
+		}
+		@media screen and (max-width: 415px) {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+	}
+	.bio-search-container {
+		margin: 0 auto;
+		@media screen and (max-width: 930px) {
+			margin-left: 30px;
+			margin-right: 30px;
+		}
+		> form {
+			margin-top: 35px;
+		}
+	}
+}
+
+section.bio-browse-subtopic .browse-topic .subtopics ul li:last-child {
+	border-bottom: 0px;
+}

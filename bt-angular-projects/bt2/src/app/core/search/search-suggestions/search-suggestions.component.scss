@@ -1,0 +1,55 @@
+@charset "UTF-8";
+@import "../../../../sass/base/mixins";
+
+//Autocomplete (search bar)
+.autocomplete-tab {
+
+	@include device(phone){
+		//margin-left: 30px;
+		//margin-right: 30px;
+    }
+
+
+    ul, div {
+        //new design
+        margin-top: 0px;
+        z-index: 1;
+        background: #fff;
+        padding: 10px 0px;
+        border-radius:0px 0px 10px 10px;
+        list-style: none;
+        
+
+        position: relative;
+        //top: 10px !important;
+        
+        max-height: 420px;
+        overflow-y: auto;
+
+		z-index: 10;
+		li {
+			color: #253a47;
+            font-size: 18px;
+            font-family: 'kontrapunkt', Arial, sans-serif;
+			padding: 7px 40px;
+			&:hover {
+                //background: #e6f1f7;
+                cursor: pointer;
+			}
+        }
+
+        p {
+            padding: 7px 40px;;
+		}
+		
+        
+    //end new design
+	}
+}
+
+li.highlighted {
+	background: #e6f1f7;
+	cursor: pointer;
+}
+
+

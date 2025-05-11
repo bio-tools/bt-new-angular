@@ -1,0 +1,91 @@
+/* VARIABLES */
+/* MIXIN */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  99% {
+    transform: rotate(359deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* line 7, ../../sass/pages/front.scss */
+section.bio-top-section {
+  padding-bottom: 215px;
+}
+@media screen and (max-width: 850px) {
+  /* line 7, ../../sass/pages/front.scss */
+  section.bio-top-section {
+    padding-bottom: 115px;
+  }
+}
+/* line 12, ../../sass/pages/front.scss */
+section.bio-top-section .top-text-front {
+  padding-top: 135px;
+  max-width: 700px;
+  margin: 0 auto;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 90px;
+}
+@media screen and (max-width: 850px) {
+  /* line 12, ../../sass/pages/front.scss */
+  section.bio-top-section .top-text-front {
+    font-size: 24px;
+    padding-left: 70px;
+    padding-right: 70px;
+    padding-bottom: 50px;
+  }
+}
+@media screen and (max-width: 420px) {
+  /* line 12, ../../sass/pages/front.scss */
+  section.bio-top-section .top-text-front {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+/* line 30, ../../sass/pages/front.scss */
+section.bio-top-section .bio-search-container {
+  margin: 0 auto;
+  margin-top: 35px;
+}
+@media screen and (max-width: 930px) {
+  /* line 30, ../../sass/pages/front.scss */
+  section.bio-top-section .bio-search-container {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+/* line 38, ../../sass/pages/front.scss */
+section.bio-top-section .bio-search-container.hide {
+  height: auto;
+  opacity: 1;
+}
+
+/* line 47, ../../sass/pages/front.scss */
+.sidebar-grid .left-sidebar .sidebar-heading {
+  font-weight: 700;
+  font-size: 32px;
+  color: #fff;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  padding-left: 40px;
+  padding-right: 75px;
+}
+@media screen and (max-width: 850px) {
+  /* line 47, ../../sass/pages/front.scss */
+  .sidebar-grid .left-sidebar .sidebar-heading {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+    padding-right: 175px;
+  }
+}
+@media screen and (max-width: 440px) {
+  /* line 47, ../../sass/pages/front.scss */
+  .sidebar-grid .left-sidebar .sidebar-heading {
+    padding-right: 30px;
+  }
+}

@@ -1,0 +1,75 @@
+/* VARIABLES */
+$main-width: 1500px;
+$darkblue: #253a47;
+$lightblue: #33d5ef;
+$lightbluehover: #37b4d1;
+
+/* MIXIN */
+@mixin device($media) {
+	@if $media == phone {
+		@media screen and (max-width: 850px) { @content;}
+	}
+	@else if $media == tablet {
+		@media screen and (max-width: 1000px) { @content; }
+	}
+	@else if $media == normalscreen {
+		@media screen and (max-width: 1500px) { @content; }
+	}
+	@else if $media == screen {
+		@media screen and (min-width: 1501px) { @content; }
+	}
+}
+
+@mixin main-width {
+	width: $main-width;
+	position: relative;
+	margin: 0 auto;
+	padding: 0px 30px;
+	@media screen and (max-width:1515px) {
+		width: 100%;
+	}
+}
+
+@mixin bezier {
+	-webkit-transition: 0.5s cubic-bezier(0.27, 4, 0.32, 0.95);
+  -moz-transition: 0.5s cubic-bezier(0.27, 4, 0.32, 0.95);
+  -ms-transition: 0.5s cubic-bezier(0.27, 4, 0.32, 0.95);
+  -o-transition: 0.5s cubic-bezier(0.27, 4, 0.32, 0.95);
+  transition: 0.5s cubic-bezier(0.27, 4, 0.32, 0.95);
+}
+
+@mixin all-easing {
+	-webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  -o-transition: all 0.2s ease-out;
+  -ms-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+@mixin slow-easing {
+	-webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -o-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+@mixin bgcover {
+	-webkit-background-size: cover; 
+	-moz-background-size: cover; 
+	-o-background-size: cover; 
+	background-size: cover;
+}
+
+@mixin bgcontain {
+	-webkit-background-size: contain; 
+	-moz-background-size: contain; 
+	-o-background-size: contain; 
+	background-size: contain;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  99% { transform: rotate(359deg); }
+  100% { transform: rotate(360deg); }
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="css/screen.css" rel="stylesheet" />
+	<link href="css/pages/tool.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+	<title>bio.tools - bio.tools</title>
+</head>
+
+<body>
+	<section class="bio-top-section">
+		<header id="header">
+			<a href="index.html" class="site-logo"></a>
+			<span class="register-toggle"></span>
+			<span class="login-toggle"></span>
+			<div class="menu-toggle">
+				<span class="line first"></span>
+				<span class="line second"></span>
+				<span class="line third"></span>
+				<span class="menu">Menu</span>
+			</div>
+		</header>
+		<div class="bio-search-browse">
+			<div class="search-toggle">Search</div>
+			<a href="#tool-details" class="browse-toggle active">Browse</a>
+		</div>
+		<div class="bio-search-container">
+			<form method="get" id="search-block-form" accept-charset="UTF-8">
+			  <input title="Search tool and data services..." type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" placeholder="Search tool and data services...">
+				<input type="submit" id="edit-submit" value="Søg" class="button js-form-submit form-submit">
+			</form>
+		</div>
+		<div id="bio-search-autocomplete"></div>
+		<div class="sticky-menu">
+			<a href="index.html" class="sticky-logo"></a>
+			<div class="bio-search-browse">
+				<div class="search-toggle">Search</div>
+				<a href="#tool-details" class="browse-toggle active">Browse</a>
+			</div>
+			<div class="menu-toggle">
+				<span class="line first"></span>
+				<span class="line second"></span>
+				<span class="line third"></span>
+				<span class="menu">Menu</span>
+			</div>
+		</div>
+		<div class="bio-breadcrumbs-container">
+			<div class="inner">
+				<div class="breadcrumbs">
+					<a href="index.html">Home</a>
+					<span></span>
+					<a href="sequence-analysis.html">Sequence analysis</a>
+					<span></span>
+					<a href="#">Mapping</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="tool-details" class="two-col-grid prose">
+		<div class="inner">
+			<div class="left-col">
+				<h1>bio.tools <span>version 4.1</span></h1>
+				<p>Prediction of the presence and location of signal peptide cleavage sites in amino acid sequences from different organisms.</p>
+				<div class="tool-description">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae tortor in velit vulputate viverra ac nec quam. Sed non metus dolor. Aenean iaculis augue sed nulla viverra consectetur. Sed vel feugiat nulla, non ullamcorper purus. Nam ac metus varius augue euismod mattis. Aliquam ultrices tortor ligula, nec facilisis sapien. </p> 
+				</div>
+				<div class="bio-btn-blue-stroke">
+					<span class="bio-read-expand">Read more</span>
+				</div>
+			</div>
+			<div class="right-col">
+				<div class="tool-left">
+					<div class="bio-btn-blue-stroke-small">
+						<a href="http://cbs.dtu.dk/services/SignalP/">http://cbs.dtu.dk/services/SignalP/</a>
+					</div>
+					<div class="bio-unavailable">
+						<span>Temorarily unavaliable</span>
+					</div>
+				</div>
+				<div class="tool-right">
+					<div class="badge">
+						<img alt="Article has an altmetric score of 5" src="https://badges.altmetric.com/?size=128&amp;score=5&amp;types=bttttttf">
+					</div>
+				</div>
+			</div>
+			<div class="bio-tag-row"><a href="#" class="tag stroke">Mature</a><a href="#" class="tag stroke">Other</a><a href="#" class="tag stroke">Free of charge (with restrictions)</a><a href="#" class="tag stroke">CBS</a><a href="#" class="tag stroke">Command line tool</a><a href="#" class="tag stroke">Web application</a><a href="#" class="tag mac-os"></a><a href="#" class="tag linux-os"></a></div>
+		</div>
+	</section>
+	<section class="bio-topics">
+		<div class="inner prose">
+			<h2>Topics</h2>
+			<div class="bio-tag-row third"><a href="#" class="tag">Protein sites, features and motifs<span class="tooltip">Tooltip</span></a></div>
+		</div>
+	</section>
+	<section class="functions">
+		<div class="function-container prose">
+			<div class="inner">
+				<h3>Function 1</h3>
+				<div class="function-columns">
+					<div class="function-col first">
+						<div class="function-heading">
+							<div class="f-heading input"><span>Input</span></div>
+						</div>
+						<div class="function-content">
+							<div class="function-item">
+								<span>Sequence <br/>(FASTA)</span>
+							</div>
+						</div>
+					</div>
+					<div class="function-col second">
+						<div class="function-heading">
+							<div class="f-heading operation"><span>Operation</span></div>
+						</div>
+						<div class="function-content">
+							<div class="function-item">
+								<span>Protein signal peptide detection
+									<br/><br/><br/><br/>
+									Protein cleavage site prediction</span>
+							</div>
+						</div>
+					</div>
+					<div class="function-col third">
+						<div class="function-heading">
+							<div class="f-heading output"><span>Output</span></div>
+						</div>
+						<div class="function-content">
+							<div class="function-item">
+								<span>Protein signal peptide detection <br/>(GFF)</span>
+							</div>
+							<div class="function-item">
+								<span>Sequence report</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="note-container">
+					<span class="note-toggle">Note</span>
+					<div class="note-content">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="bio-tool-details">
+		<div class="inner">
+			<div class="three-col-grid prose">
+				<div class="grid-row">
+					<div class="grid-column first">
+						<h4>Credits</h4>
+						<p>TN Petersen<br/>Developer</p>
+						<p>CBS | Institute<br/>Provider</p>
+						<p>Henrik Nielsen<br/>Developer <a href="#">hnielsen@cbs.dtu.dk</a></p> 
+					</div>
+					<div class="grid-column second">
+						<h4>Links</h4>
+						<p><a href="#">Repository</a></p> 
+					</div>
+					<div class="grid-column third">
+						<h4>Contacts</h4>
+						<p>Henrik Nielsen<br/><a href="#">hnielsen@cbs.dtu.dk</a></p> 
+					</div>
+				</div>
+				<div class="grid-row">
+					<div class="grid-column first">
+						<h4>Documentation</h4>
+						<p>SIB Swiss Institute of Bioinformatics | Institute</p>
+					</div>
+					<div class="grid-column second">
+						<h4>Downloads</h4>
+						<p><a href="#">Source Code</a></p> 
+						<p><a href="#">Binaries</a></p> 
+					</div>
+				</div>
+			</div>
+			<div class="publication-details-grid prose">
+				<h4>Publication details</h4>
+				<article class="bio-details">
+					<div class="inner">
+						<div class="details-left">
+							<img alt="Article has an altmetric score of 61" src="https://badges.altmetric.com/?size=128&amp;score=61&amp;types=bttttttf">
+							<img src="https://badge.dimensions.ai/badge?count=38" class="__dimensions_png" alt="38 total citations on Dimensions.">
+						</div>
+						<div class="details-right">
+							<div class="bio-tag-row third"><a href="#" class="tag">Other<span class="tooltip">Type of publication : click to read more.</span></a></div>
+							<div class="bio-doi">DOI: <a href="#">10.1093/nar/gkv1116</a></div>
+							<h5>Tools and data services registry: A community effort to document bioinformatics resources</h5>
+							<div class="bio-authors">Hillion K.-H. Kuzmin I. Khodak A. Rasche E. Crusoe M. Peterson H. Ison J. Menager H.</div>
+							<div class="article-details">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae tortor in velit vulputate viverra ac nec quam. Sed non metus dolor. Aenean iaculis augue sed nulla viverra consectetur. Sed vel feugiat nulla, non ullamcorper purus. Nam ac metus varius augue euismod mattis. Aliquam ultrices tortor ligula, nec facilisis sapien. </p> 
+							</div>
+							<div class="bio-btn-blue-stroke">
+								<span class="bio-read-expand">Read more</span>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="bio-details">
+					<div class="inner">
+						<div class="details-left">
+							<img alt="Article has an altmetric score of 23" src="https://badges.altmetric.com/?size=128&amp;score=23&amp;types=bttttttf">
+							<img src="https://badge.dimensions.ai/badge?count=73" class="__dimensions_png" alt="73 total citations on Dimensions.">
+						</div>
+						<div class="details-right">
+							<div class="bio-tag-row third"><a href="#" class="tag">Primary<span class="tooltip">Type of publication : click to read more.</span></a></div>
+							<div class="bio-doi">DOI: <a href="#">10.12688/f1000research.12974.1</a></div>
+							<h5>Using bio.tools to generate and annotate workbench tool descriptions</h5>
+							<div class="bio-authors">Menager H. Kalas M. Rapacki K. Ison J.</div>
+							<div class="article-details">
+								<p>© 2015, The Author(s).The diversity and complexity of bioinformatics resources presents significant challenges to their localisation, deployment and use, creating a need for reliable systems that address these issues. Meanwhile, users demand increasingly usable and integrated ways to access and analyse data, especially within convenient, integrated “workbench” environments. Resource descriptions are the core element of registry and workbench systems, which are used to both help the user find and comprehend available software tools, data resources, and Web Services, and to localise, execute and combine them. The descriptions are, however, hard and expensive to create and maintain, because they are volatile and require an exhaustive knowledge of the described resource, its applicability to biological research, and the data model and syntax used to describe it. We present here the Workbench Integration Enabler, a software component that will ease the integration of bioinformatics resources in a workbench environment, using their description provided by the existing ELIXIR Tools and Data Services Registry.</p> 
+							</div>
+							<div class="bio-btn-blue-stroke">
+								<span class="bio-read-expand">Read more</span>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="bio-details">
+					<div class="inner">
+						<div class="details-left">
+							<img alt="Article has an altmetric score of 18" src="https://badges.altmetric.com/?size=128&amp;score=18&amp;types=bttttttf">
+							<img src="https://badge.dimensions.ai/badge?count=12" class="__dimensions_png" alt="12 total citations on Dimensions.">
+						</div>
+						<div class="details-right">
+							<div class="bio-tag-row third"><a href="#" class="tag">Other<span class="tooltip">Type of publication : click to read more.</span></a></div>
+							<div class="bio-doi">DOI: <a href="#">10.1093/nar/gkv1116</a></div>
+							<h5>ReGaTE: Registration of galaxy tools in Elixir</h5>
+							<div class="bio-authors">Hillion K.-H. Kuzmin I. Khodak A. Rasche E. Crusoe M. Peterson H. Ison J. Menager H.</div>
+							<div class="article-details">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae tortor in velit vulputate viverra ac nec quam. Sed non metus dolor. Aenean iaculis augue sed nulla viverra consectetur. Sed vel feugiat nulla, non ullamcorper purus. Nam ac metus varius augue euismod mattis. Aliquam ultrices tortor ligula, nec facilisis sapien. </p> 
+							</div>
+							<div class="bio-btn-blue-stroke">
+								<span class="bio-read-expand">Read more</span>
+							</div>
+						</div>
+					</div>
+				</article>
+				<article class="bio-details">
+					<div class="inner">
+						<div class="details-left">
+							<img alt="Article has an altmetric score of 13" src="https://badges.altmetric.com/?size=128&amp;score=13&amp;types=bttttttf">
+							<img src="https://badge.dimensions.ai/badge?count=24" class="__dimensions_png" alt="24 total citations on Dimensions.">
+						</div>
+						<div class="details-right">
+							<div class="bio-tag-row third"><a href="#" class="tag">Other<span class="tooltip">Type of publication : click to read more.</span></a></div>
+							<div class="bio-doi">DOI: <a href="#">10.1093/nar/gkv1116</a></div>
+							<h5>Using registries to integrate bioinformatics tools and services into workbench environments</h5>
+							<div class="bio-authors">Hillion K.-H. Kuzmin I. Khodak A. Rasche E. Crusoe M. Peterson H. Ison J. Menager H.</div>
+							<div class="article-details">
+								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae tortor in velit vulputate viverra ac nec quam. Sed non metus dolor. Aenean iaculis augue sed nulla viverra consectetur. Sed vel feugiat nulla, non ullamcorper purus. Nam ac metus varius augue euismod mattis. Aliquam ultrices tortor ligula, nec facilisis sapien. </p> 
+							</div>
+							<div class="bio-btn-blue-stroke">
+								<span class="bio-read-expand">Read more</span>
+							</div>
+						</div>
+					</div>
+				</article>
+			</div>
+		</div>
+	</section>
+	<section class="bio-tool-actions">
+		<div class="inner">
+			<div class="bio-btn-blue-stroke">
+				<a href="#">Request editing rights</a>
+			</div>
+			<div class="bio-btn-blue">
+				<a href="#">Request ownership</a>
+			</div>
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="inner">
+			<div class="site-logo-container">
+				<a href="index.html" class="site-logo"></a>
+			</div>
+			<nav class="primary-nav">
+				<ul>
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<nav class="secondary-nav">
+				<ul>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Cookies</a></li>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Subscribe to our newsletter</a></li>
+				</ul>
+			</nav>
+			<div class="media-links">
+				<div class="social">
+					<a href="#" class="twitter"></a>
+					<a href="#" class="linkedin"></a>
+					<a href="#" class="github"></a>
+				</div>
+				<div class="other">
+					<a href="#" class="elixir"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<section class="bio-menu-overlay">
+		<div class="close-overlay"><span class="close">Close</span></div>
+		<div class="left-overlay"></div>
+		<div class="inner">
+			<div class="navigation">
+				<span class="prev-btn"></span>
+				<span class="mobile-toggles">
+					<span class="register-toggle"></span>
+					<span class="login-toggle"></span>
+				</span>
+				<div class="primary-menu">
+					<nav>
+						<ul>
+							<li><span class="documentation">Documentation</span></li>
+							<li><span class="support">Support</span></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="documentation">
+					<nav>
+						<ul>
+							<li><a href="#">Level 2 navigation</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Sit amet</a></li>
+							<li><a href="#">Tegus tednav</a></li>
+							<li><a href="#">Ilustraticon</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="support">
+					<nav>
+						<ul>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Helpdesk</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="login">
+				<div class="login-form">
+					<form class="user-login-form" method="post" accept-charset="UTF-8">
+					  <h3>Login</h3>
+					  <div class="bio-form-item dark">
+					    <input type="email" name="email" class="form-text required" required="required">
+					    <label>E-mail</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="password" name="pass" class="form-text required" required="required">
+					    <label>Password</label>
+					  </div>
+					  <div class="bio-form-actions">
+					  	<div class="bio-btn-blue">
+						  	<input type="submit" name="op" value="Login" class="form-submit">
+						  </div>
+					  	<a href="#">Forgot password?</a>
+					  </div>
+					</form>
+					<h3>Register now for free</h3>
+					<ul class="checkmarks">
+						<li>Register new tools</li>
+						<li>Improve excisting entries</li>
+						<li>Request editing rights</li>
+					</ul>
+					<div class="bio-btn-blue-stroke">
+						<span class="register-now">Register now</span>
+					</div>
+				</div>
+			</div>
+			<div class="register">
+				<div class="register-form">
+					<form class="user-register-form" method="post" accept-charset="UTF-8">
+					  <h3>Register now for free</h3>
+					  <div class="bio-form-item dark">
+					    <input type="text" name="fname" class="form-text required" required="required">
+					    <label>First name</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="text" name="lname" class="form-text required" required="required">
+					    <label>Last name</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="email" name="email" class="form-text required" required="required">
+					    <label>E-mail</label>
+					  </div>
+					  <div class="bio-form-actions">
+					  	<div class="bio-btn-blue">
+						  	<input type="submit" name="op" value="Register" class="form-submit">
+						  </div>
+					  </div>
+					</form>
+					<ul class="checkmarks">
+						<li>Register new tools</li>
+						<li>Improve excisting entries</li>
+						<li>Request editing rights</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/components.js"></script>
+	<script type="text/javascript" src="js/components-form-elements.js"></script>
+	<script type="text/javascript" src="js/overlay-menu.js"></script>
+</body>
+</html>

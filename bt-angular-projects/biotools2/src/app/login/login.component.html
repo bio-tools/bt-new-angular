@@ -1,0 +1,33 @@
+<!-- We need to see if we add the login username and password here or in a separate component -->
+<p style="color: red;" *ngIf="error">
+    {{ error | json }}    
+</p>
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+    <div>
+        <label for="username">Username:</label>
+        <input 
+            type="text" 
+            id="username"
+            ngModel
+            name="username"
+            required
+        >
+    </div>
+    <div>
+        <label for="password">Password:</label>
+        <input 
+            type="password" 
+            id="password"
+            ngModel
+            name="password"
+            required
+        >
+    </div>
+    <div>
+        <button 
+            type="submit"
+            [disabled]="!loginForm.valid"
+            bt-btn-dark
+            >Login</button>&nbsp;&nbsp;<a [routerLink]="['/','reset-password']">Forgot password?</a>&nbsp;&nbsp; Don't have an account? <a [routerLink]="['/','signup']">Sign up</a>
+    </div>
+</form>

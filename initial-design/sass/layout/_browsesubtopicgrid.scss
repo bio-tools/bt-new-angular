@@ -1,0 +1,70 @@
+section.bio-browse-subtopic {
+	background: #fafafa;
+	.browse-topic {
+		.topic-heading {
+			border-bottom: 1px solid #d3d8da;
+			overflow: hidden;
+			position: relative;
+			padding: 65px 40px;
+			h1 {
+				max-width: 800px;
+				padding-bottom: 25px;
+				span {
+					font-weight: 400;
+				}
+			}
+			.subheading {
+				font-size: 22px;
+				color: #66757e;
+				max-width: 800px;
+			}
+		}
+		.subtopics {
+			overflow: auto;
+			position: relative;
+			ul {
+				list-style: none;
+				li {
+					width: 100%;
+					border-bottom: 1px solid #d3d8da;
+					overflow: hidden;
+					position: relative;
+					@include device(phone){
+						width: 100%;
+						float: none;
+					}
+					a {
+						display: block;
+						padding: 26px 110px 26px 40px;
+						font-size: 22px;
+						position: relative;
+						@include all-easing;
+						overflow: hidden;
+						height: 100%;
+						&:hover {
+							text-decoration: none;
+							background: #e3e9ed;
+							color: $darkblue;
+							&:after {
+								background: #e3e9ed url("../images/blue-arrow-small.svg") no-repeat center center;
+							}
+						}
+						&:after {
+							content: "";
+							display: block;
+							position: absolute;
+							width: 80px;
+							right: 0px;
+							top: 0px;
+							bottom: 0px;
+							background: #e6f6f9 url("../images/blue-arrow-small.svg") no-repeat center center;
+							@media screen and (max-width: 400px) {
+								width: 50px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}	
+}

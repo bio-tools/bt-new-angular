@@ -1,0 +1,45 @@
+<!-- The main searchbar, with css based on _components.scss
+    should be its own component with dropdown suggestions and everything-->
+<!-- <div class="bio-search-container">
+    <input title="Search tool and data services..." type="search" id="edit-keys" name="keys" value="" size="15"
+        maxlength="128" class="form-search" placeholder="Search tool and data services..." autocomplete="off">
+    <input type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit">
+</div> -->
+
+<!-- <div class="bio-search-container">
+        <tag-input [(ngModel)]='tags' inputClass="form-search" placeholder="Add item"
+            secondaryPlaceholder="Search tool and data services..."></tag-input>
+        <input type="submit" id="edit-submit" value="Search" class="button js-form-submit form-submit">    
+</div> -->
+<div (clickOutside)="closeAutocomplete()" class="search-container">
+    <div class="bio-search-container">
+        <mat-form-field class="example-chip-list" color="accent">
+            <mat-chip-list #chipList aria-label="Tag selection">
+                <mat-chip *ngFor="let tag of searchTags" [selectable]="selectable" [removable]="removable"
+                    (removed)="remove(tag)" (keydown)="searchFocus()">
+                    {{tag.category}}:&nbsp;<span class="tag-value">{{tag.value}}</span>
+                    <mat-icon matChipRemove *ngIf="removable">cancel</mat-icon>
+                </mat-chip>
+                <input placeholder="Search bio.tools ..." [matChipInputFor]="chipList"
+                    [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="addOnBlur"
+                    (matChipInputTokenEnd)="add($event)" autocomplete="off" [(ngModel)]="mytext"
+                    (ngModelChange)="onChangeText($event)" #searchInput
+                    (keyup.arrowdown)="nextSuggestion()"
+                    (keyup.arrowup)="prevSuggestion()"
+                    (keyup.escape)="closeAutocomplete()" class="form-search" id="tool-search"
+                    (keyup.backspace)="somefunction()">
+            </mat-chip-list>
+        </mat-form-field>
+        <input (click)="callSearch()" id="edit-submit" value="Search" class="button js-form-submit form-submit">
+    </div>
+    <div class="bt-search-autocomplete" >
+        <mat-tab-group animationDuration="350ms" backgroundColor="primary" color="accent" dynamicHeight
+            (click)="searchFocus()" [(selectedIndex)]="tabIndex" *ngIf="showHide()" mat-stretch-tabs>
+            <mat-tab *ngFor="let category of searchCategories" label="{{category.label}}">
+                <app-bt-search-suggestions [items]="category.filteredItems" (itemSelected)="addFromSuggestion($event)"
+                    [(indexHighlight)]="suggestionIndex" [query]="mytext">
+                </app-bt-search-suggestions>
+            </mat-tab>
+        </mat-tab-group>
+    </div>
+</div>

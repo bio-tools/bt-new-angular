@@ -1,0 +1,35 @@
+section.two-col-grid {
+	> .inner {
+		@include main-width;
+		padding-top: 70px;
+		padding-bottom: 50px;
+		overflow: hidden;
+		> .left-col, > .right-col {
+			float: left;
+			width: 50%;
+			overflow: hidden;
+			@include device(phone){
+				float: none;
+				width: 100%;
+			}
+		}
+		> .left-col {
+			padding-right: 80px;
+			@include device(tablet){
+				padding-right: 40px;
+			}
+			@include device(phone){
+				padding-right: 0px;
+			}
+		}
+		> .right-col {
+			padding-left: 80px;
+			@include device(tablet){
+				padding-left: 40px;
+			}
+			@include device(phone){
+				padding-left: 0px;
+			}
+		}
+	}
+}

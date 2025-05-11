@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="css/screen.css" rel="stylesheet" />
+	<link href="css/pages/form-elements.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+	<title>Form elements - bio.tools</title>
+</head>
+
+<body>
+	<section class="bio-top-section">
+		<header id="header">
+			<a href="index.html" class="site-logo"></a>
+			<span class="register-toggle"></span>
+			<span class="login-toggle"></span>
+			<div class="menu-toggle">
+				<span class="line first"></span>
+				<span class="line second"></span>
+				<span class="line third"></span>
+				<span class="menu">Menu</span>
+			</div>
+		</header>
+		<div class="bio-search-browse">
+			<div class="search-toggle">Search</div>
+			<a href="#browse-topic" class="browse-toggle active">Browse</a>
+		</div>
+		<div class="bio-search-container">
+			<form method="get" id="search-block-form" accept-charset="UTF-8">
+			  <input title="Search tool and data services..." type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" placeholder="Search tool and data services...">
+				<input type="submit" id="edit-submit" value="Søg" class="button js-form-submit form-submit">
+			</form>
+		</div>
+		<div id="bio-search-autocomplete"></div>
+		<div class="sticky-menu">
+			<a href="index.html" class="sticky-logo"></a>
+			<div class="bio-search-browse">
+				<div class="search-toggle">Search</div>
+				<a href="#browse-topic" class="browse-toggle active">Browse</a>
+			</div>
+			<div class="menu-toggle">
+				<span class="line first"></span>
+				<span class="line second"></span>
+				<span class="line third"></span>
+				<span class="menu">Menu</span>
+			</div>
+		</div>
+		<div class="bio-breadcrumbs-container">
+			<div class="inner">
+				<div class="breadcrumbs">
+					<a href="index.html">Home</a>
+					<span></span>
+					<a href="sequence-analysis.html">Sequence analysis</a>
+					<span></span>
+					<a href="#">Mapping</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="form-elements-container">
+		<div class="inner">
+			<h1>Form elements</h1>
+			<div class="bio-form-item">
+		    <input type="email" value="my@email.com" name="email" class="form-text required" required="required">
+		    <label>Email</label>
+		  </div>
+		  <div class="bio-form-item error">
+		    <input type="text" name="texttest" class="form-text required" required="required">
+		    <label>Validation error</label>
+		  </div>
+		  <div class="bio-form-item">
+		    <input type="password" value="abcder" name="pass" class="form-text required" required="required">
+		    <label>Password</label>
+		  </div>
+		  <div class="bio-checkbox-switch dark">
+				<span class="off-label">Off</span>
+			  <input type="checkbox" name="checkbox1" id="checkbox1" class="bio-check-toggle" checked/>
+			  <label for="checkbox1" class="checkbox-label"><span></span></label>
+			  <span class="on-label">On</span>
+			</div>
+			<div class="bio-select-container">
+				<select>
+					<option value="all" selected="selected">- Selection -</option>
+				  <option value="volvo">Option 1</option>
+				  <option value="saab">Option 2</option>
+				  <option value="mercedes">Option 3</option>
+				  <option value="audi">Option 4</option>
+				</select>
+			</div>
+			<div class="bio-checkbox-container">
+			  <input type="checkbox" name="testcheck" id="testcheck" checked />
+			  <label for="testcheck" class="checkbox-label">Checkbox 1</label>
+			</div>
+			<div class="bio-checkbox-container alt-icon">
+			  <input type="checkbox" name="dataformat" id="dataformat" checked />
+			  <label for="dataformat" class="checkbox-label">Checkbox 2</label>
+			</div>
+			<div class="bio-radio-container">
+		  	<input type="radio" name="group1" id="red" checked />
+		  	<label for="red" class="radio-label">Red</label>
+		  	<input type="radio" name="group1" id="green" />
+		  	<label for="green" class="radio-label">Green</label>
+		  	<input type="radio" name="group1" id="yellow" />
+		  	<label for="yellow" class="radio-label">Yellow</label>
+			</div>
+			<div class="bio-radio-container block">
+		  	<input type="radio" name="group2" id="first" checked />
+		  	<label for="first" class="radio-label">First</label>
+		  	<input type="radio" name="group2" id="second" />
+		  	<label for="second" class="radio-label">Second</label>
+		  	<input type="radio" name="group2" id="third" />
+		  	<label for="third" class="radio-label">Third</label>
+			</div>
+			<div class="bio-loader-container">
+				<span class="loader"></span>
+			</div>
+			<div class="bio-loader-container small">
+				<span class="loader"></span>
+			</div>
+			<div class="bio-btn-blue">
+				<span>Button</span>
+			</div>
+			<div class="bio-btn-darkblue">
+				<span>Button</span>
+			</div>
+			<div class="bio-btn-darkblue-large">
+				<span>Button</span>
+			</div>
+			<div class="bio-btn-blue-stroke">
+				<span>Button</span>
+			</div>
+			<div class="bio-btn-blue-stroke-small">
+				<span>Button</span>
+			</div>
+			<div class="bio-btn-darkblue-stroke">
+				<span>Button</span>
+			</div>
+		</div>
+	</section>
+	<footer id="footer">
+		<div class="inner">
+			<div class="site-logo-container">
+				<a href="index.html" class="site-logo"></a>
+			</div>
+			<nav class="primary-nav">
+				<ul>
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<nav class="secondary-nav">
+				<ul>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Cookies</a></li>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Subscribe to our newsletter</a></li>
+				</ul>
+			</nav>
+			<div class="media-links">
+				<div class="social">
+					<a href="#" class="twitter"></a>
+					<a href="#" class="linkedin"></a>
+					<a href="#" class="github"></a>
+				</div>
+				<div class="other">
+					<a href="#" class="elixir"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<section class="bio-menu-overlay">
+		<div class="close-overlay"><span class="close">Close</span></div>
+		<div class="left-overlay"></div>
+		<div class="inner">
+			<div class="navigation">
+				<span class="prev-btn"></span>
+				<span class="mobile-toggles">
+					<span class="register-toggle"></span>
+					<span class="login-toggle"></span>
+				</span>
+				<div class="primary-menu">
+					<nav>
+						<ul>
+							<li><span class="documentation">Documentation</span></li>
+							<li><span class="support">Support</span></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="documentation">
+					<nav>
+						<ul>
+							<li><a href="#">Level 2 navigation</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Sit amet</a></li>
+							<li><a href="#">Tegus tednav</a></li>
+							<li><a href="#">Ilustraticon</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="support">
+					<nav>
+						<ul>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Helpdesk</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="login">
+				<div class="login-form">
+					<form class="user-login-form" method="post" accept-charset="UTF-8">
+					  <h3>Login</h3>
+					  <div class="bio-form-item dark">
+					    <input type="email" name="email" class="form-text required" required="required">
+					    <label>E-mail</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="password" name="pass" class="form-text required" required="required">
+					    <label>Password</label>
+					  </div>
+					  <div class="bio-form-actions">
+					  	<div class="bio-btn-blue">
+						  	<input type="submit" name="op" value="Login" class="form-submit">
+						  </div>
+					  	<a href="#">Forgot password?</a>
+					  </div>
+					</form>
+					<h3>Register now for free</h3>
+					<ul class="checkmarks">
+						<li>Register new tools</li>
+						<li>Improve excisting entries</li>
+						<li>Request editing rights</li>
+					</ul>
+					<div class="bio-btn-blue-stroke">
+						<span class="register-now">Register now</span>
+					</div>
+				</div>
+			</div>
+			<div class="register">
+				<div class="register-form">
+					<form class="user-register-form" method="post" accept-charset="UTF-8">
+					  <h3>Register now for free</h3>
+					  <div class="bio-form-item dark">
+					    <input type="text" name="fname" class="form-text required" required="required">
+					    <label>First name</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="text" name="lname" class="form-text required" required="required">
+					    <label>Last name</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="email" name="email" class="form-text required" required="required">
+					    <label>E-mail</label>
+					  </div>
+					  <div class="bio-form-actions">
+					  	<div class="bio-btn-blue">
+						  	<input type="submit" name="op" value="Register" class="form-submit">
+						  </div>
+					  </div>
+					</form>
+					<ul class="checkmarks">
+						<li>Register new tools</li>
+						<li>Improve excisting entries</li>
+						<li>Request editing rights</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/components.js"></script>
+	<script type="text/javascript" src="js/components-form-elements.js"></script>
+	<script type="text/javascript" src="js/overlay-menu.js"></script>
+</body>
+</html>

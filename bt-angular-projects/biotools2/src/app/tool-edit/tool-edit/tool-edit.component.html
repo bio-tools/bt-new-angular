@@ -1,0 +1,28 @@
+<p>tool-edit works!</p>
+<p>
+    We are editing the <b>{{biotoolsID}}</b> tool.
+</p>
+
+<button (click)="putRandomName()">Update tool with random name</button>
+<hr>
+<button (click)="onValidate()">Validate</button> | <button (click)="onSave()">Save</button> | <button (click)="onDelete()">Delete</button> | <button (click)="goToEntryPage()">Go to entry</button>
+<bt-json-editor [data]="tool|json" (dataChange)="updateToolObject($event)"></bt-json-editor>
+
+<section *ngIf="tool">
+    <h1>Contents</h1>
+    <h3>Tool id: {{tool.biotoolsID}} , name: {{tool.name}}</h3>
+    <pre class="scroll-box">{{tool | json}}</pre>    
+</section>
+
+<button (click)="onValidate()">Validate</button> | <button (click)="onSave()">Save</button> | <button (click)="onDelete()">Delete</button>
+ | <a [routerLink]="['/',biotoolsID]">Go to entry</a>
+<p style="color: red;" *ngIf="error">
+    {{ error | json }}    
+</p>
+
+
+<!-- [Note]: Need to show spinner or wait or something before getting tool , otherwise this can be seen before loading tool -->
+<section *ngIf="!tool">
+    <h1>Could not find tool with id: {{biotoolsID}}</h1>  
+</section>
+

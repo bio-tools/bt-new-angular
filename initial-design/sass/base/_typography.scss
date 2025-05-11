@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'kontrapunkt';
+    src: url('../fonts/Kontrapunkt-LightItalic-webfont.eot');
+    src: url('../fonts/Kontrapunkt-LightItalic-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Kontrapunkt-LightItalic-webfont.woff') format('woff'),
+         url('../fonts/Kontrapunkt-LightItalic-webfont.ttf') format('truetype'),
+         url('../fonts/Kontrapunkt-LightItalic-webfont.svg#kontrapunktlight_italic') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'kontrapunkt';
+    src: url('../fonts/Kontrapunkt-Light-webfont.eot');
+    src: url('../fonts/Kontrapunkt-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Kontrapunkt-Light-webfont.woff') format('woff'),
+         url('../fonts/Kontrapunkt-Light-webfont.ttf') format('truetype'),
+         url('../fonts/Kontrapunkt-Light-webfont.svg#kontrapunktlight') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'kontrapunkt';
+  src: url('../fonts/Kontrapunkt-Bold-webfont.eot');
+  src: url('../fonts/Kontrapunkt-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+       url('../fonts/Kontrapunkt-Bold-webfont.woff') format('woff'),
+       url('../fonts/Kontrapunkt-Bold-webfont.ttf') format('truetype'),
+       url('../fonts/Kontrapunkt-Bold-webfont.svg#kontrapunktbold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}

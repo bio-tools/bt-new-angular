@@ -1,0 +1,34 @@
+<section id="browse-topic" class="sidebar-grid">
+    <!--This needs to be its own component, Adreas made a mess here-->
+    <section class="left-sidebar">
+        <div class="sidebar-heading">Browse resources by popular terms</div>
+        <p class="side-bar-description">Explore bio.tools by the most popular bioinformatics concepts, or <a
+                [routerLink]="['/t']" [queryParams]="{page: '1'}">view all tools</a></p>
+    </section>
+    <section class="main-content">
+        <section class="bio-browse-topics">
+            <!-- EDAM start terms-->
+            <section class="browse-topic" *ngFor="let t of terms">
+                <div class="topic-heading">
+                    <div>
+                        <span
+                            [ngClass]="t.icon"
+                            class="icon">
+                        </span>
+                        <strong>{{t.title}}</strong>
+
+                        <p [innerHTML]="t.description"></p>
+                    </div>
+
+                </div>
+                <div class="subtopics">
+                    <ul>
+                        <li *ngFor="let s of t.subTerms"><a href="/edam/{{s.uri}}">{{s.name}}</a></li>
+                    </ul>
+                </div>
+            </section>
+            <!---->
+            
+        </section>
+    </section>
+</section>

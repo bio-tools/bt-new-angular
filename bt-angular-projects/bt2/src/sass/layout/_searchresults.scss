@@ -1,0 +1,201 @@
+//Search results
+//List view
+section.bio-search-list {
+	article.search-item {
+		padding-left: 40px;
+		padding-right: 40px;
+		padding-top: 45px;
+		padding-bottom: 38px;
+		border-bottom: 1px solid #d3d8da;
+		@include device(phone){
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+		h3, .description, .bio-tag-row {
+			padding-left: 60px;
+			max-width: 910px;
+			@include device(phone){
+				padding-left: 40px;
+			}
+		}
+		h3 {
+			color: $lightblue;
+			background: url("assets/images/circle_lightblue.svg") no-repeat left center;
+			font-weight: 400;
+			margin-bottom: 20px;
+			@include device(phone){
+				font-size: 24px;
+			}
+		}
+		.description {
+			color: #66757e;
+			font-size: 18px;
+			line-height: 28px;
+			padding-bottom: 20px;
+		}
+	}
+	div.load-more-container {
+		padding: 65px 0px;
+		text-align: center;
+		.bio-btn-blue {
+			display: inline-block;
+		}
+	}
+}
+
+//Grid view
+section.bio-search-grid {
+	.bio-table-container {
+		overflow-x: scroll;
+		.bio-table {
+			width: 100%;
+		}
+	}
+	div.table-header, div.table-body .table-row {
+		overflow: hidden;
+		display: flex;
+		> div {
+			min-width: 390px;
+			max-width: 390px;
+			&.size-small {
+				min-width: 340px;
+				max-width: 340px;
+			}
+			&.size-medium {
+				min-width: 390px;
+				max-width: 390px;
+			}
+			&.size-large {
+				min-width: 520px;
+				max-width: 520px;
+			}
+		}
+	}
+	div.table-header {
+		border-bottom: 3px solid $lightblue;
+		background: #f4f5f6;
+		> div {
+			font-size: 24px;
+			padding: 22px 30px;
+			border-right: 1px solid #d3d8da;
+			&:last-child {
+				border-right: 0px;
+			}
+		}
+	}
+	div.table-body {
+		color: #66757e;
+		ul {
+			list-style-type: none;
+			li {
+				background: url("assets/images/circle-small.svg") no-repeat left top;
+				padding-left: 20px;
+				padding-bottom: 13px;
+				&:last-child {
+					padding-bottom: 0px;
+				}
+			}
+		}
+		.table-row {
+			border-bottom: 1px solid #d3d8da;
+			&:hover {
+				background: #ebfbfd;
+			}
+			> div {
+				padding: 35px 30px;
+				border-right: 1px solid #d3d8da;
+				&:last-child {
+					border-right: 0px;
+				}
+			}
+		}
+	}
+	div.load-more-container {
+		padding: 65px 0px;
+		text-align: center;
+		.bio-btn-blue {
+			display: inline-block;
+		}
+	}
+}
+
+//Edit columns overlay in filter view
+.column-filters-container {
+	position: relative;
+	display: none;
+	&.display {
+		display: block;
+	}
+	> .column-filters {
+		background: $lightblue;
+		position: absolute;
+		left: 0px;
+		right: 0px;
+		top: 0px;
+		z-index: 10;
+		.collapse-toggle {
+			display: block;
+	    width: 75px;
+	    height: 40px;
+	    background: url('assets/images/collapse-toggle-right.svg') no-repeat right top;
+	    @include all-easing;
+	    position: absolute;
+	    right: 0px;
+	    top: 55px;
+	    cursor: pointer;
+	    z-index: 30;
+	    opacity: 0.5;
+	    &:hover {
+	    	opacity: 1;
+	    }
+		}
+		> .inner {
+			@include main-width;
+			width: 1160px;
+			overflow: hidden;
+			padding-top: 150px;
+			padding-bottom: 30px;
+			> .col {
+				width: 25%;
+				float: left;
+				padding-right: 50px;
+				padding-bottom: 50px;
+				&:nth-child(4n){
+					padding-right: 0px;
+				}
+				@include device(tablet){
+					width: 50%;
+					&:nth-child(4n){
+						padding-right: 50px;
+					}
+					&:nth-child(2n){
+						padding-right: 0px;
+					}
+				}
+				@include device(phone){
+					width: 100%;
+					&:nth-child(2n){
+						padding-right: 50px;
+					}
+				}
+			}
+		}
+		> .form-actions {
+			text-align: center;
+			padding-bottom: 120px;
+			> div {
+				display: inline-block;
+				@include device(phone){
+					display: block;
+				}
+				&:first-child {
+					padding-right: 20px;
+					@include device(phone){
+						padding-right: 0px;
+						padding-bottom: 10px;
+					}
+				}
+			}
+		}
+	}
+}

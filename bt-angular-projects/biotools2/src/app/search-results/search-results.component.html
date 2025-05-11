@@ -1,0 +1,15 @@
+<p>search-results works!</p>
+
+<h3>Total of {{searchResults.count}} tools</h3>
+
+<button (click)="nextPage()" [disabled]="!searchResults.next">Next</button>
+<p style="color: red;" *ngIf="error">
+    {{ error | json }}    
+</p>
+
+<section *ngFor="let tool of tools">
+    <hr>
+    <h3>{{tool.name}}</h3>
+    <h3><a [routerLink]="['/',tool.biotoolsID]">{{tool.biotoolsID}}</a></h3>
+    <pre class="scroll-box">{{tool | json}}</pre>
+</section>

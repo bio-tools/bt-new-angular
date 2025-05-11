@@ -1,0 +1,30 @@
+<p>user-profile works!</p>
+<div *ngIf="authenticatedUser">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Added</th>
+                <th>Last updated</th>
+                <th>Sharing</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let tool of authenticatedUser.resources">
+                <td><a [routerLink]="['/',tool.id]">{{tool.name}}</a></td>
+                <td>{{tool.additionDate | date}}</td>
+                <td>{{tool.lastUpdate | date}}</td>
+                <td>{{tool.editPermission.type}}</td>
+                <td><button (click)="disownTool(tool.id)">Disown</button></td>
+            </tr>
+            
+        </tbody>
+    </table>
+    
+    <hr>
+
+    <pre class="scroll-box">{{authenticatedUser | json}}</pre> 
+</div>
+

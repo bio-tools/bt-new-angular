@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link href="css/screen.css" rel="stylesheet" />
+	<link href="css/pages/search-grid.css" rel="stylesheet" />
+	<link rel="shortcut icon" href="images/favicon.png" type="image/png" />
+	<title>Search (Grid) - bio.tools</title>
+</head>
+
+<body>
+	<section class="bio-top-section">
+		<header id="header">
+			<a href="index.html" class="site-logo"></a>
+			<span class="register-toggle"></span>
+			<span class="login-toggle"></span>
+			<div class="menu-toggle">
+				<span class="line first"></span>
+				<span class="line second"></span>
+				<span class="line third"></span>
+				<span class="menu">Menu</span>
+			</div>
+		</header>
+		<div class="bio-search-browse">
+			<div class="search-toggle active">Search</div>
+			<a href="#browse-topic" class="browse-toggle">Browse</a>
+		</div>
+		<div class="bio-search-container hide">
+			<form method="get" id="search-block-form" accept-charset="UTF-8">
+			  <input title="Search tool and data services..." type="search" id="edit-keys" name="keys" value="" size="15" maxlength="128" class="form-search" placeholder="Search tool and data services...">
+				<input type="submit" id="edit-submit" value="Søg" class="button js-form-submit form-submit">
+			</form>
+		</div>
+		<div id="bio-search-autocomplete"></div>
+		<div class="sticky-menu">
+			<a href="index.html" class="sticky-logo"></a>
+			<div class="bio-search-browse">
+				<div class="search-toggle active">Search</div>
+				<a href="#browse-topic" class="browse-toggle">Browse</a>
+			</div>
+			<div class="menu-toggle">
+				<span class="line first"></span>
+				<span class="line second"></span>
+				<span class="line third"></span>
+				<span class="menu">Menu</span>
+			</div>
+		</div>
+		<div class="bio-top-options">
+			<span class="collapse-toggle"></span>
+			<div class="bio-sort">
+				<div class="sort-item">
+					<div class="inner">
+						<span class="option-label">Sort By</span>
+						<div class="sort-options">
+							<a href="#" class="sort-updated active">Updated</a>
+							<a href="#" class="sort-added">Added</a>
+							<a href="#" class="sort-name">Name</a>
+						</div>
+					</div>
+				</div>
+				<div class="sort-item">
+					<div class="inner">
+						<div class="bio-checkbox-switch">
+							<span class="off-label">A-Z</span>
+						  <input type="checkbox" name="checkbox1" id="checkbox1" class="bio-check-toggle" checked/>
+						  <label for="checkbox1" class="checkbox-label"><span></span></label>
+						  <span class="on-label">Z-A</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="bio-display">
+				<div class="sort-item">
+					<div class="inner">
+						<span class="option-label">Display</span>
+						<div class="display-options">
+							<a href="search-list.html" class="display-list"></a>
+							<a href="search-grid.html" class="display-grid active"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="column-filters-container">
+		<div class="column-filters">
+			<span class="collapse-toggle"></span>
+			<div class="inner">
+				<div class="col">
+					<div class="filter-item expand">
+						<div class="bio-checkbox-container alt-icon light">
+						  <input type="checkbox" name="summary" id="summary" checked/>
+						  <label for="summary" class="checkbox-label large">Summary</label>
+						</div>
+						<div class="sub-filters no-padding">
+							<div class="sub-item">
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="name" id="name" />
+								  <label for="name" class="checkbox-label">Name</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="version" id="version"/>
+								  <label for="version" class="checkbox-label">Version</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="description" id="description" />
+								  <label for="description" class="checkbox-label">Description</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="canonical" id="canonical" checked/>
+								  <label for="canonical" class="checkbox-label">Canonical ID</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="homepage" id="homepage" />
+								  <label for="homepage" class="checkbox-label">Homepage</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="tooltypetwo" id="tooltypetwo" />
+								  <label for="tooltypetwo" class="checkbox-label">Tool type</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="filter-item expand">
+						<div class="bio-checkbox-container alt-icon light">
+						  <input type="checkbox" name="labels" id="labels" checked/>
+						  <label for="labels" class="checkbox-label large">Labels</label>
+						</div>
+						<div class="sub-filters no-padding">
+							<div class="sub-item">
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="topictwo" id="topictwo" />
+								  <label for="topictwo" class="checkbox-label">Topic</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="ostwo" id="ostwo"/>
+								  <label for="ostwo" class="checkbox-label">Operating System</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="languagetwo" id="languagetwo" />
+								  <label for="languagetwo" class="checkbox-label">Language</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="licensetwo" id="licensetwo" checked/>
+								  <label for="licensetwo" class="checkbox-label">License</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="collectiontwo" id="collectiontwo" />
+								  <label for="collectiontwo" class="checkbox-label">Collection</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="maturitytwo" id="maturitytwo" checked />
+								  <label for="maturitytwo" class="checkbox-label">Maturity</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="costtwo" id="costtwo" checked/>
+								  <label for="costtwo" class="checkbox-label">Cost</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="accessibilitytwo" id="accessibilitytwo" />
+								  <label for="accessibilitytwo" class="checkbox-label">Accessibility</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="filter-item expand">
+						<div class="bio-checkbox-container alt-icon light">
+						  <input type="checkbox" name="function" id="function" checked/>
+						  <label for="function" class="checkbox-label large">Function</label>
+						</div>
+						<div class="sub-filters no-padding">
+							<div class="sub-item">
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="inputtwo" id="inputtwo" />
+								  <label for="inputtwo" class="checkbox-label">Input</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="operationtwo" id="operationtwo" checked/>
+								  <label for="operationtwo" class="checkbox-label">Operation</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="outputtwo" id="outputtwo" />
+								  <label for="outputtwo" class="checkbox-label">Output</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col">
+					<div class="filter-item expand">
+						<div class="bio-checkbox-container alt-icon light">
+						  <input type="checkbox" name="other" id="other" checked/>
+						  <label for="other" class="checkbox-label large">Other</label>
+						</div>
+						<div class="sub-filters no-padding">
+							<div class="sub-item">
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="publicationstwo" id="publicationstwo" />
+								  <label for="publicationstwo" class="checkbox-label">Publications</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="creditstwo" id="creditstwo"/>
+								  <label for="creditstwo" class="checkbox-label">Credits</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="contacttwo" id="contacttwo" />
+								  <label for="contacttwo" class="checkbox-label">Contact</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="documentationtwo" id="documentationtwo" />
+								  <label for="documentationtwo" class="checkbox-label">Documentation</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="downloadstwo" id="downloadstwo" checked/>
+								  <label for="downloadstwo" class="checkbox-label">Downloads</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="linkstwo" id="linkstwo" />
+								  <label for="linkstwo" class="checkbox-label">Links</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="sourcetwo" id="sourcetwo" />
+								  <label for="sourcetwo" class="checkbox-label">Source Registry</label>
+								</div>
+								<div class="bio-checkbox-container light">
+								  <input type="checkbox" name="mirror" id="mirror" />
+								  <label for="mirror" class="checkbox-label">Mirror</label>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-actions">
+				<div class="bio-btn-darkblue-stroke">
+					<a href="#">Reset</a>
+				</div>
+				<div class="bio-btn-darkblue-large">
+					<a href="#">Submit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<section class="search-results-heading">
+		<h1>324 results</h1>
+	</section>
+	<section id="browse-topic" class="sidebar-grid filter collapse">
+		<span class="expand-toggle"></span>
+		<span class="edit-cols-toggle"></span>
+		<span class="sort-toggle-mobile"></span>
+		<section class="left-sidebar">
+			<span class="collapse-toggle"></span>
+			<h3>Filter by</h3>
+			<div class="filter-item">
+				<div class="bio-checkbox-container light">
+				  <input type="checkbox" name="topic" id="topic" checked/>
+				  <label for="topic" class="checkbox-label">Topic</label>
+				</div>
+				<div class="sub-filters no-padding">
+					<div class="sub-item">
+						<div class="bio-tags-container"><span class="tag">AppleScript<span class="remove"></span></span></div>
+					</div>
+					<div class="sub-item">
+						<form method="get" id="topic-block-form" accept-charset="UTF-8">
+						  <input title="Topic" type="search" name="keys" value="" size="15" maxlength="128" class="form-search" placeholder="Topic">
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="filter-item">
+				<div class="bio-checkbox-container light">
+				  <input type="checkbox" name="tooltype" id="tooltype" />
+				  <label for="tooltype" class="checkbox-label">Tool type</label>
+				</div>
+			</div>
+			<div class="filter-item">
+				<div class="bio-checkbox-container light">
+				  <input type="checkbox" name="haspub" id="haspub" checked />
+				  <label for="haspub" class="checkbox-label">Has publication</label>
+				</div>
+				<div class="sub-filters">
+					<div class="sub-item">
+						<div class="bio-checkbox-switch">
+							<span class="off-label">No</span>
+						  <input type="checkbox" name="haspublication" id="haspublication" class="bio-check-toggle" checked/>
+						  <label for="haspublication" class="checkbox-label"><span></span></label>
+						  <span class="on-label">Yes</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filter-item">
+				<div class="bio-checkbox-container alt-icon light">
+				  <input type="checkbox" name="os" id="os" checked/>
+				  <label for="os" class="checkbox-label">Operating system</label>
+				</div>
+				<div class="sub-filters">
+					<div class="sub-item">
+						<div class="bio-checkbox-container light">
+						  <input type="checkbox" name="linux" id="linux" />
+						  <label for="linux" class="checkbox-label">Linux</label>
+						</div>
+						<div class="bio-checkbox-container light">
+						  <input type="checkbox" name="windows" id="windows" checked/>
+						  <label for="windows" class="checkbox-label">Windows</label>
+						</div>
+						<div class="bio-checkbox-container light">
+						  <input type="checkbox" name="mac" id="mac" />
+						  <label for="mac" class="checkbox-label">MacOS</label>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filter-item">
+				<div class="bio-checkbox-container light">
+				  <input type="checkbox" name="datatype" id="datatype" />
+				  <label for="datatype" class="checkbox-label">Input data type</label>
+				</div>
+			</div>
+			<div class="filter-item">
+				<div class="bio-checkbox-container light">
+				  <input type="checkbox" name="dataformat" id="dataformat" checked />
+				  <label for="dataformat" class="checkbox-label">Input data format</label>
+				</div>
+				<div class="sub-filters no-padding">
+					<div class="sub-item">
+						<div class="bio-select-container light">
+							<select>
+								<option value="all" selected="selected">- Selection -</option>
+							  <option value="volvo">Option 1</option>
+							  <option value="saab">Option 2</option>
+							  <option value="mercedes">Option 3</option>
+							  <option value="audi">Option 4</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="filter-item">
+				<div class="bio-checkbox-container light">
+				  <input type="checkbox" name="operation" id="operation" />
+				  <label for="operation" class="checkbox-label">Operation</label>
+				</div>
+			</div>
+			<div class="filter-item">
+				<div class="bio-checkbox-container light">
+				  <input type="checkbox" name="language" id="language" />
+				  <label for="language" class="checkbox-label">Language</label>
+				</div>
+			</div>
+			<div class="filter-item">
+				<div class="bio-checkbox-container light">
+				  <input type="checkbox" name="license" id="license" checked />
+				  <label for="license" class="checkbox-label">License</label>
+				</div>
+			</div>
+			<div class="bio-form-actions">
+		  	<div class="bio-btn-darkblue">
+			  	<a href="#">Reset all</a>
+			  </div>
+		  </div>
+		</section>
+		<section class="main-content">
+			<section class="bio-search-grid">
+				<div class="bio-table-container">
+					<div class="bio-table">
+						<div class="table-header">
+							<div class="size-medium">Name</div>
+							<div class="size-large">Description</div>
+							<div class="size-small">Function</div>
+							<div class="size-small">Topic</div>
+						</div>
+						<div class="table-body">
+							<div class="table-row">
+								<div class="size-medium">
+									<a href="#">Ensembl Fugu Genome Browser</a>
+								</div>
+								<div class="size-large">Fugu Ensembl is a joint project between The IMCB and the EMBL - EBI to produce and maintain an automatic annotation of the Fugu Genome.</div>
+								<div class="size-small">
+									<ul>
+										<li>Visualisation</li>
+										<li>Annotation</li>
+										<li>Gene prediction</li>
+										<li>Genome visualisation</li>
+										<li>Genome annotation</li>
+									</ul>
+								</div>
+								<div class="size-small">
+									<ul>
+										<li>Humans</li>
+										<li>Genomics</li>
+										<li>Database management</li>
+										<li>Whole genome sequencing</li>
+										<li>Gene transcripts</li>
+									</ul>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="size-medium">
+									<a href="#">Ensembl Mosquito Genome Browser</a>
+								</div>
+								<div class="size-large">This site presents the tenfold whole genome shotgun assembly of the PEST strain of anopheles gambiae, as prepared by The International Anopheles Genome project.</div>
+								<div class="size-small">
+									<ul>
+										<li>Visualisation</li>
+										<li>Annotation</li>
+										<li>Gene prediction</li>
+										<li>Assembly</li>
+										<li>Visualisation</li>
+									</ul>
+								</div>
+								<div class="size-small">
+									<ul>
+										<li>Humans</li>
+										<li>Genomics</li>
+										<li>Database management</li>
+										<li>Whole genome sequencing</li>
+										<li>Sequence assembly</li>
+										<li>Gene transcripts</li>
+									</ul>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="size-medium">
+									<a href="#">BBMap</a>
+								</div>
+								<div class="size-large">BBMap is a fast splice-aware aligner for RNA and DNA. It is faster than almost all short-read aligners, yet retains unrivaled sensitivity and specificity, particularly for reads with many errors and indels.</div>
+								<div class="size-small">
+									<ul>
+										<li>RNA-Seq analysis</li>
+										<li>Sequence trimming</li>
+										<li>Read mapping</li>
+										<li>Sequence contamination filtering</li>
+										<li>Sequence alignment</li>
+									</ul>
+								</div>
+								<div class="size-small">
+									<ul>
+										<li>Sequencing</li>
+										<li>RNA splicing</li>
+										<li>Whole genome sequencing</li>
+										<li>Phylogenetics</li>
+										<li>Metagenomics</li>
+										<li>RNA-Seq</li>
+									</ul>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="size-medium">
+									<a href="#">REALPHY</a>
+								</div>
+								<div class="size-large">REALPHY - The Reference sequence Alignment based Phylogeny builder is a free online pipeline that can infer phylogenetic trees from whole genome sequence data....</div>
+								<div class="size-small">
+									<ul>
+										<li>RNA-Seq analysis</li>
+										<li>Sequence trimming</li>
+										<li>Read mapping</li>
+										<li>Sequence contamination filtering</li>
+										<li>Sequence alignment</li>
+									</ul>
+								</div>
+								<div class="size-small">
+									<ul>
+										<li>Sequencing</li>
+										<li>RNA splicing</li>
+										<li>Whole genome sequencing</li>
+										<li>Phylogenetics</li>
+										<li>Metagenomics</li>
+										<li>RNA-Seq</li>
+									</ul>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="size-medium">
+									<a href="#">gnomAD</a>
+								</div>
+								<div class="size-large">Genetic variation database based on 123,136 exome sequences and 15,496 whole-genome sequences and enables search of genetic variation information by gene, variant or region.</div>
+								<div class="size-small">
+									<ul>
+										<li>Exome analysis</li>
+										<li>Genotyping</li>
+										<li>Read mapping</li>
+										<li>Aggregation</li>
+										<li>Genetic variation analysis</li>
+									</ul>
+								</div>
+								<div class="size-small">
+									<ul>
+										<li>Genetic variation</li>
+										<li>Mapping</li>
+									</ul>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="size-medium">
+									<a href="#">MAKER-P</a>
+								</div>
+								<div class="size-large">The MAKER-P pipeline is designed to annotate novel plant genomes and is build on the MAKER annotation tool. The MAKER-P pipeline generates species-specific repeat libraries, as well...</div>
+								<div class="size-small">
+									<ul>
+										<li>Genome annotation</li>
+									</ul>
+								</div>
+								<div class="size-small">
+									<ul>
+										<li>Whole genome sequencing</li>
+										<li>Data submission, annotation and curation</li>
+									</ul>
+								</div>
+							</div>
+							<div class="table-row">
+								<div class="size-medium">
+									<a href="#">PSMC</a>
+								</div>
+								<div class="size-large">Implementation of the Pairwise Sequentially Markovian Coalescent (PSMC) model to infer population history from whole genome sequence data</div>
+								<div class="size-small">
+									<ul>
+										<li>Phylogenetic tree analysis</li>
+									</ul>
+								</div>
+								<div class="size-small">
+									<ul>
+										<li>Phylogenomics</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="load-more-container">
+					<div class="bio-btn-blue">
+						<a href="#">Load more</a>
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+	<footer id="footer">
+		<div class="inner">
+			<div class="site-logo-container">
+				<a href="index.html" class="site-logo"></a>
+			</div>
+			<nav class="primary-nav">
+				<ul>
+					<li><a href="#">Documentation</a></li>
+					<li><a href="#">Support</a></li>
+					<li><a href="#">Contact</a></li>
+				</ul>
+			</nav>
+			<nav class="secondary-nav">
+				<ul>
+					<li><a href="#">Privacy</a></li>
+					<li><a href="#">Cookies</a></li>
+					<li><a href="#">Terms of use</a></li>
+					<li><a href="#">Subscribe to our newsletter</a></li>
+				</ul>
+			</nav>
+			<div class="media-links">
+				<div class="social">
+					<a href="#" class="twitter"></a>
+					<a href="#" class="linkedin"></a>
+					<a href="#" class="github"></a>
+				</div>
+				<div class="other">
+					<a href="#" class="elixir"></a>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<section class="bio-menu-overlay">
+		<div class="close-overlay"><span class="close">Close</span></div>
+		<div class="left-overlay"></div>
+		<div class="inner">
+			<div class="navigation">
+				<span class="prev-btn"></span>
+				<span class="mobile-toggles">
+					<span class="register-toggle"></span>
+					<span class="login-toggle"></span>
+				</span>
+				<div class="primary-menu">
+					<nav>
+						<ul>
+							<li><span class="documentation">Documentation</span></li>
+							<li><span class="support">Support</span></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="documentation">
+					<nav>
+						<ul>
+							<li><a href="#">Level 2 navigation</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Sit amet</a></li>
+							<li><a href="#">Tegus tednav</a></li>
+							<li><a href="#">Ilustraticon</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="support">
+					<nav>
+						<ul>
+							<li><a href="#">Support</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+							<li><a href="#">Helpdesk</a></li>
+							<li><a href="#">Lorem ipsum dolor</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+			<div class="login">
+				<div class="login-form">
+					<form class="user-login-form" method="post" accept-charset="UTF-8">
+					  <h3>Login</h3>
+					  <div class="bio-form-item dark">
+					    <input type="email" name="email" class="form-text required" required="required">
+					    <label>E-mail</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="password" name="pass" class="form-text required" required="required">
+					    <label>Password</label>
+					  </div>
+					  <div class="bio-form-actions">
+					  	<div class="bio-btn-blue">
+						  	<input type="submit" name="op" value="Login" class="form-submit">
+						  </div>
+					  	<a href="#">Forgot password?</a>
+					  </div>
+					</form>
+					<h3>Register now for free</h3>
+					<ul class="checkmarks">
+						<li>Register new tools</li>
+						<li>Improve excisting entries</li>
+						<li>Request editing rights</li>
+					</ul>
+					<div class="bio-btn-blue-stroke">
+						<span class="register-now">Register now</span>
+					</div>
+				</div>
+			</div>
+			<div class="register">
+				<div class="register-form">
+					<form class="user-register-form" method="post" accept-charset="UTF-8">
+					  <h3>Register now for free</h3>
+					  <div class="bio-form-item dark">
+					    <input type="text" name="fname" class="form-text required" required="required">
+					    <label>First name</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="text" name="lname" class="form-text required" required="required">
+					    <label>Last name</label>
+					  </div>
+					  <div class="bio-form-item dark">
+					    <input type="email" name="email" class="form-text required" required="required">
+					    <label>E-mail</label>
+					  </div>
+					  <div class="bio-form-actions">
+					  	<div class="bio-btn-blue">
+						  	<input type="submit" name="op" value="Register" class="form-submit">
+						  </div>
+					  </div>
+					</form>
+					<ul class="checkmarks">
+						<li>Register new tools</li>
+						<li>Improve excisting entries</li>
+						<li>Request editing rights</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/components.js"></script>
+	<script type="text/javascript" src="js/components-form-elements.js"></script>
+	<script type="text/javascript" src="js/overlay-menu.js"></script>
+</body>
+</html>

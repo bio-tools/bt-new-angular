@@ -1,0 +1,24 @@
+<p>tool-card works!</p>
+<p>
+    We are on the <b>{{biotoolsID}}</b> tool card page.
+</p>
+<section *ngIf="tool">
+    <h1>Contents</h1>
+    <h3>Tool id: {{tool.biotoolsID}} , name: {{tool.name}}</h3>
+
+    <!-- This needs to be in a container with  *ngIf="tool"-->
+    <div *ngIf="tool">
+        <!-- For the buttons should we have them show/not show or disabled/enabled? -->
+        <button *ngIf="canUpdateTool()" (click)="updateTool()"> Update tool </button>
+        <button *ngIf="isNotOwner()" (click)="requestOwnership()"> Request ownership </button>
+        <button *ngIf="needsEditRights()" (click)="requestEditRights()"> Request edit rights </button>
+    </div>
+
+    <pre class="scroll-box">{{tool | json}}</pre>    
+</section>
+
+<!-- Need to show spinner or wait or something before getting tool , otherwise this can be seen before loading tool -->
+<section *ngIf="!tool">
+    <h1>Could not find tool with id: {{biotoolsID}}</h1>  
+</section>
+

@@ -1,0 +1,68 @@
+@use "config" as *;
+@use "mixins" as *;
+@use "typography" as *;
+
+// Document body
+// ------------------------
+
+body {
+    background-color: $base-background-color;
+  
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+  
+    font-family: 'kontrapunkt', Arial, sans-serif !important;
+  }
+  
+  // Headings
+  // ------------------------
+  
+  h1, h2, h3, h4, h5, h6 {
+    text-rendering: optimizeLegibility;
+    line-height: $base-heading-line-height;
+  }
+  
+  h1 {
+    font-size: 32px;
+    font-weight: 700;
+    @include device(phone){
+      font-size: 26px;
+    }
+  }
+  
+  h2 {
+    font-size: 30px;
+    font-weight: 700;
+    @include device(phone){
+      font-size: 24px;
+    };
+  }
+  
+  h3 {
+    font-size: $base-heading-h3;
+  }
+  
+  h4 {
+    font-size: $base-heading-h4;
+  }
+  
+  h5 {
+    font-size: $base-heading-h5;
+  }
+  
+  h6 {
+    font-size: $base-heading-h6;
+  }
+  
+  // Anchor
+  // ------------------------
+  
+  a {
+    &:hover {}
+    &:active, &:focus {}
+  }
+  
+  // Material elements custom
+  .mat-tab-label{
+    font-weight: 600;
+  } 

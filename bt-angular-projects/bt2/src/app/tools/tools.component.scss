@@ -1,0 +1,9 @@
+@charset "UTF-8";
+@import "../../sass/base/mixins";
+/*Should have this in a separate file, we reference it in many places*/
+section.bio-top-section {
+    background: url("../../assets/images/topbanner-bg.jpg") no-repeat top center;
+	@include bgcover;
+	padding-bottom: 55px;
+	font-family: 'kontrapunkt', Arial, sans-serif;
+}

@@ -1,0 +1,26 @@
+@import "../../../sass/base/mixins";
+
+.bio-small-spinner-container {
+    display: grid;
+    padding: 10px;
+
+    span.datalabel{
+        justify-self: center;
+        align-self: center;
+        padding: 10px;
+    }
+
+	span.spinner {
+        justify-self: center;
+        align-self: center;
+        
+	    border: 5px solid #cdebf5; /* Light grey */
+	    border-top: 5px solid $lightblue; /* Blue */
+	    display: block;
+	    border-radius: 50%;
+	    width: 50px;
+	    height: 50px;
+	    animation: spin 1.3s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+	}
+
+}

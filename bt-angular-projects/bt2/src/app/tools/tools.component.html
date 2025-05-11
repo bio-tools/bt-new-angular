@@ -1,0 +1,22 @@
+<section class="bio-top-section">
+
+    <!--Header part-->
+    <app-bt-header></app-bt-header>
+    
+    <app-bt-search-browse-jump></app-bt-search-browse-jump>
+
+    <app-bt-search [autorefresh]="true" [onTools]="true"></app-bt-search>
+</section>
+
+
+<div *ngFor="let tool of tools?.list">
+    <h3>{{tool.name}}</h3>
+    <h3>{{tool.biotoolsID}}</h3>
+    <h3><a href="/{{tool.biotoolsID}}">Link to {{tool.biotoolsID}}</a></h3>
+    <pre class="scroll-box">{{tool | json}}</pre>
+    <hr>
+</div>
+
+
+
+<!-- <pre class="scroll-box">{{tools | json}}</pre> -->

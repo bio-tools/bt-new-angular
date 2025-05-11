@@ -1,0 +1,12 @@
+<p>json-editor works!</p>
+
+<textarea 
+    name="" 
+    id="" 
+    cols="100" 
+    rows="10" 
+    [ngModel]="data" 
+    (ngModelChange)="onTextareaChange($event)"
+    [ngModelOptions]="{standalone: true}"
+></textarea>
+<p style="color:red" *ngIf="jsonError">JSON Error: {{jsonError}}</p>

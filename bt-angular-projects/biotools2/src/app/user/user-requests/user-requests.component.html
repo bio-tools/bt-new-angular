@@ -1,0 +1,49 @@
+<p>user-requests works!</p>
+<h2>Received requests</h2>
+<table *ngIf="receivedRequests">
+    <thead>
+        <tr>
+            <th>Resource</th>
+            <th>Request type</th>
+            <th>Requested by</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let request of receivedRequests">
+            <td>{{request.resourceId}}</td>
+            <td>{{request.type}}</td>
+            <td>{{request.username}}</td>
+            <td *ngIf="request.completed">{{request.accepted? 'Accepted':'Declined'}}</td>
+            <td *ngIf="!request.completed">
+                <button (click)="acceptRequest(request.requestId)">Accept</button> | 
+                <button (click)="denyRequest(request.requestId)">Decline</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2>Sent requests</h2>
+<table *ngIf="sentRequests">
+    <thead>
+        <tr>
+            <th>Resource</th>
+            <th>Request type</th>
+            <th>Requested by</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let request of sentRequests">
+            <td>{{request.resourceId}}</td>
+            <td>{{request.type}}</td>
+            <td>{{request.username}}</td>
+            <td *ngIf="!request.completed">Pending</td>
+            <td *ngIf="request.completed">{{request.accepted? 'Accepted':'Declined'}}</td>
+        </tr>
+    </tbody>
+</table>
+<hr>
+<div *ngIf="userRequests">
+    <pre class="scroll-box">{{userRequests | json}}</pre>
+</div>
